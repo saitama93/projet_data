@@ -1,4 +1,4 @@
-Projet DATA:
+﻿Projet DATA:
 
 
 -Creation du .htaccess qui redirige vers l'index.php
@@ -12,3 +12,109 @@ Projet DATA:
 - Design dans l'air du temps (Utiliser un template si pas/peu d'inspiration)
 - Présentation Professionnelle PREPAREE en fin de projet.
 - Rendu le Mercredi 29 Mai à 17h00 (Pas une minute de retard ne sera accordée).
+
+VERSIONS
+
+SOMMAIRE
+
+LEXIQUE
+
+######CONTEXTE DU PROJET
+
+Présentation de l'entreprise
+ACS formation....
+
+#Objectif du projet
+Qualitatifs : le rôle de l’application, les solutions que l’application apporte, l’innovation d’usage pour l’utilisateur…
+Quantitatifs : nombre de téléchargements, volume d’achats in-app, fréquence d’utilisation…
+
+#Les cibles du projet
+Les cibles marketing
+Les cibles d’usage : les Personas (Personnages imaginaires auxquels l’on attribue un nom, un âge, une profession, des habitudes d’achats…)
+
+#Les interfaces existantes
+Site responsive, Web app, POC, refonte d’une application existante…
+De quels interfaces disposez-vous ? Vont-elles être remplacées par l’application ? 
+Devront-elles interagir avec l’application ? 
+L’idéal est de décrire l’éco-système actuel et la façon dont l’application pourra s’y intégrer. 
+Pour cette partie, un schéma est souvent bien plus clair que de longues phrases.
+
+#La présentation du projet
+La ou les plateforme(s) : iOS, Android, web…
+L’équipement : mobile, tablette (format portrait, paysage ou les 2). 
+S’il s’agit d’un équipement unique parce que l’ensemble de la société sera équipée avec le même smartphone ou la même tablette, il faut le préciser.
+Modèle économique : application gratuite ou payante, abonnement, vente de produits, publicité…
+Le résultat attendu : souhaitez-vous un POC à présenter aux investisseurs ou un produit fini à mettre sur le marché ?
+
+######DESCRIPTION DU PROJET
+
+#Le parcours utilisateur
+Il peut se décrire via un schéma, une liste d’écrans auxquels il va accéder, 
+ou encore des users stories (Phrases décrivant simplement une fonctionnalité à développer). 
+À vous d’utiliser la méthode qui vous convient, 
+mais un schéma ou de simples croquis sont parfois beaucoup plus complets que de longs discours.
+
+#Les fonctionnalités
+La liste peut-être très longue, et peut vous paraître redondante avec l’étape précédente, mais mieux vaut ne rien oublier. Voici quelques idées :
+compte utilisateur, connexion avec Facebook ou Google,
+accès sans connexion au contenu, consultation hors ligne, restriction de contenu,
+commenter un contenu, le mettre en favori,
+invitation d’amis, messagerie,
+localisation, cartographie,
+microphone,
+appareil photo, scan de QRcode,
+bluetooth,
+système de paiement, code promo,
+moteur de recherche, filtre,
+agenda, rappel,
+notifications push,
+…
+
+#Contraintes techniques ou spécificités non-fonctionnelles
+Elles peuvent être aussi diverses que variées, voici quelques éléments que l’on retrouve le plus souvent.
+
+#Les services tiers
+À quoi faudra t-il connecter l’application ?  Un CRM, un ERP, une base de données, un outil de mailing ou de sms, un système d’information…
+
+#Compatibilité
+Avec quelles versions d’OS ou de navigateur l’application doit elle être compatible ? 
+Si vous n’avez pas de contrainte particulière, 
+il est préférable de demander le conseil de votre prestataire plutôt qu’imposer une contrainte potentiellement irréalisable.
+
+#Sécurité
+Tous les prestataires s’engagent désormais sur une conception « RGPD friendly ». Vous restez cependant responsable du traitement des données de vos clients, alors autant demander clairement ce dont vous avez besoin.
+
+#Hébergement
+Vous pouvez gérer votre hébergement en direct ou demander à l’agence qui réalise votre application de le faire, c’est à vous de voir !
+
+Attention, certains types de données demandent un hébergement spécifique comme les données de santé.
+
+#Charte graphique
+Elle est bien sûr à transmettre. Si vous n’en n’avez pas, vous pouvez déjà lister l’ensemble des éléments à votre disposition : logo, couleurs, typo…. Si vous n’avez rien, ce n’est pas grave, mais pensez à le signaler.
+
+#Maquettes
+Des premières maquettes (ou croquis) ont pu être réalisées dans le cadre d’un POC ou simplement pour illustrer facilement les éléments attendus.
+
+#Sources d’inspiration
+Il est parfois difficile de décrire ses attentes en terme de design, 
+mais il y a toujours des éléments qui nous plaisent (ou pas) dans d’autres interfaces. 
+C’est le moment de les lister (liens, captures d’écrans…) et d’indiquer ce qui vous plaît dans chacun de ces exemples.
+
+######PILOTAGE
+
+#Prestations attendues
+Est-ce qu’il s’agit de conception, graphisme, développement, etc ?  Tout cela à la fois ?
+
+#Planning
+On pense souvent à la date de fin, mais n’oubliez pas de donner une date de début de projet. Il peut parfois se dérouler beaucoup de temps entre une consultation et le lancement effectif d’un projet.
+Il y a bien sûr la deadline ; notamment si votre application est associée à un événement. Si ce n’est pas le cas, nous ne conseillons pas d’imposer une deadline pour la deadline. Cela peut être contre productif en terme de résultats attendus ; pour faire un produit qualitatif, il faut prendre le temps qu’il faut.
+
+#Budget
+On pense souvent que donner un budget va fausser la proposition du prestataire. Cela lui permettra surtout de vous faire une proposition cohérente. Imaginez-vous consulter un agent immobilier sans donner de budget pour votre projet ; les chances d’être satisfait par sa proposition sont bien moindres.
+
+#Contacts
+Qui contacter pour quelle question ?
+
+#Eléments de réponses  attendus
+Méthodologie, proposition technique, planning…
+
