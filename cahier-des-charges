@@ -58,14 +58,14 @@ Projet dans le cadre de notre formation de développeur Web et Web mobile à l'A
 
 #Objectif du projet
 Qualitatifs : L'application permettra aux utilisateurs de chercher et de trouver un festival proche ou moins proche de chez eux.
-Dans toutes la France. L'application renseignera l'usager de la date de début et fin des festivals, le trajet à parcourir pour y parvenir
-depuis sa position. L'innovation de l'application Festi'France est de répertorier de tous les festivals de France et de rassembler les festivaliers
+Dans toutes la France. L'application renseignera l'usager de la date de début et fin du festival, le trajet à parcourir pour y parvenir
+depuis sa position. L'innovation de l'application Festi'France est de répertorier tous les festivals de France et de rassembler les festivaliers
 à travers le monde...
 Quantitatifs : Application gratuite, à usage personnel ou communautaire, fréquentation illimitée…
 
 #Les cibles du projet
-Les cibles marketing
-Les cibles d’usage : les festivaliers, les intermitants du spectacles...
+Les cibles marketing : les sponsors, les marques...
+Les cibles d’usage : les festivaliers, les intermitants du spectacles, les artistes...
 
 #Les interfaces existantes
 Site responsive, Web app, POC, refonte d’une application existante…
@@ -125,9 +125,9 @@ Vous pouvez gérer votre hébergement en direct ou demander à l’agence qui r�
 Attention, certains types de données demandent un hébergement spécifique comme les données de santé.
 
 #Charte graphique
-Logo :
-Couleurs : 
-Typographie :
+Logo : 
+Couleurs : Couleurs dominantes orange et noire
+Typographie : typo blanche sur fond noire
 
 #Maquettes
 Des premières maquettes (ou croquis) ont pu être réalisées dans le cadre d’un POC ou simplement pour illustrer facilement les éléments attendus.
