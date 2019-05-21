@@ -14,23 +14,58 @@
 - Rendu le Mercredi 29 Mai à 17h00 (Pas une minute de retard ne sera accordée).
 
 VERSIONS
+1.0
 
 SOMMAIRE
+1#CONTEXTE DU PROJET
+- Présentation de l'entreprise
+- Objectif du projet
+- Les cibles du projet
+- Les interfaces existantes
+- La présentation du projet
+
+2#DESCRIPTION DU PROJET
+- Le parcours utilisateur
+- Les fonctionnalités
+- Contraintes techniques ou spécificités non-fonctionnelles
+- Les services tiers
+- Compatibilité
+- Sécurité
+- Hébergement
+- Charte graphique
+- Maquettes
+- Sources d’inspiration
+
+3#PILOTAGE
+- Prestations attendues
+- Planning
+- Budget
+- Contacts
+- Eléments de réponses  attendus
+
+
 
 LEXIQUE
+POC --> Une preuve de concept (de l'anglais : proof of concept, POC) ou démonstration de faisabilité, 
+est une réalisation expérimentale concrète et préliminaire, courte ou incomplète, 
+illustrant une certaine méthode ou idée afin d'en démontrer la faisabilité.
 
-######CONTEXTE DU PROJET
 
-Présentation de l'entreprise
-ACS formation....
+ ######CONTEXTE DU PROJET######
+
+#Présentation de l'entreprise
+Projet dans le cadre de notre formation de développeur Web et Web mobile à l'ACS de Besançon.
 
 #Objectif du projet
-Qualitatifs : le rôle de l’application, les solutions que l’application apporte, l’innovation d’usage pour l’utilisateur…
-Quantitatifs : nombre de téléchargements, volume d’achats in-app, fréquence d’utilisation…
+Qualitatifs : L'application permettra aux utilisateurs de chercher et de trouver un festival proche ou moins proche de chez eux.
+Dans toutes la France. L'application renseignera l'usager de la date de début et fin des festivals, le trajet à parcourir pour y parvenir
+depuis sa position. L'innovation de l'application Festi'France est de répertorier de tous les festivals de France et de rassembler les festivaliers
+à travers le monde...
+Quantitatifs : Application gratuite, à usage personnel ou communautaire, fréquentation illimitée…
 
 #Les cibles du projet
 Les cibles marketing
-Les cibles d’usage : les Personas (Personnages imaginaires auxquels l’on attribue un nom, un âge, une profession, des habitudes d’achats…)
+Les cibles d’usage : les festivaliers, les intermitants du spectacles...
 
 #Les interfaces existantes
 Site responsive, Web app, POC, refonte d’une application existante…
@@ -43,8 +78,8 @@ Pour cette partie, un schéma est souvent bien plus clair que de longues phrases
 La ou les plateforme(s) : iOS, Android, web…
 L’équipement : mobile, tablette (format portrait, paysage ou les 2). 
 S’il s’agit d’un équipement unique parce que l’ensemble de la société sera équipée avec le même smartphone ou la même tablette, il faut le préciser.
-Modèle économique : application gratuite ou payante, abonnement, vente de produits, publicité…
-Le résultat attendu : souhaitez-vous un POC à présenter aux investisseurs ou un produit fini à mettre sur le marché ?
+Modèle économique : application gratuite 
+Le résultat attendu : présentation d'une appli dans le cadre d'une formation
 
 ######DESCRIPTION DU PROJET
 
@@ -74,7 +109,7 @@ notifications push,
 Elles peuvent être aussi diverses que variées, voici quelques éléments que l’on retrouve le plus souvent.
 
 #Les services tiers
-À quoi faudra t-il connecter l’application ?  Un CRM, un ERP, une base de données, un outil de mailing ou de sms, un système d’information…
+À quoi faudra t-il connecter l’application ?  une base de données, un outil de mailing ou de sms, un système d’information…
 
 #Compatibilité
 Avec quelles versions d’OS ou de navigateur l’application doit elle être compatible ? 
@@ -90,7 +125,9 @@ Vous pouvez gérer votre hébergement en direct ou demander à l’agence qui r�
 Attention, certains types de données demandent un hébergement spécifique comme les données de santé.
 
 #Charte graphique
-Elle est bien sûr à transmettre. Si vous n’en n’avez pas, vous pouvez déjà lister l’ensemble des éléments à votre disposition : logo, couleurs, typo…. Si vous n’avez rien, ce n’est pas grave, mais pensez à le signaler.
+Logo :
+Couleurs : 
+Typographie :
 
 #Maquettes
 Des premières maquettes (ou croquis) ont pu être réalisées dans le cadre d’un POC ou simplement pour illustrer facilement les éléments attendus.
@@ -106,14 +143,17 @@ C’est le moment de les lister (liens, captures d’écrans…) et d’indiquer
 Est-ce qu’il s’agit de conception, graphisme, développement, etc ?  Tout cela à la fois ?
 
 #Planning
+Date de début du projet : 20/05/2019
+Date de fin de projet : 29/05/2019
+Deadline : 3/06/2019
 On pense souvent à la date de fin, mais n’oubliez pas de donner une date de début de projet. Il peut parfois se dérouler beaucoup de temps entre une consultation et le lancement effectif d’un projet.
 Il y a bien sûr la deadline ; notamment si votre application est associée à un événement. Si ce n’est pas le cas, nous ne conseillons pas d’imposer une deadline pour la deadline. Cela peut être contre productif en terme de résultats attendus ; pour faire un produit qualitatif, il faut prendre le temps qu’il faut.
 
 #Budget
-On pense souvent que donner un budget va fausser la proposition du prestataire. Cela lui permettra surtout de vous faire une proposition cohérente. Imaginez-vous consulter un agent immobilier sans donner de budget pour votre projet ; les chances d’être satisfait par sa proposition sont bien moindres.
+pas de budget
 
 #Contacts
-Qui contacter pour quelle question ?
+Igal, Priscilla, Sébastien, les créateurs.Pour toutes demandes, questions, informations, conseils, aides vis à vis de cette application
 
 #Eléments de réponses  attendus
 Méthodologie, proposition technique, planning…
