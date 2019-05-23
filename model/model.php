@@ -10,7 +10,7 @@
         //Retour des éléments de la base de données
         $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
         
-        $affich_donnee = $pdo->query('SELECT nom_de_la_manifestation FROM liste_festivals WHERE departement = 15 ');
+        $affich_donnee = $pdo->query('SELECT nom_de_la_manifestation FROM liste_festivals WHERE departement = 39 ');
 
         return $affich_donnee->fetchAll();
     }
