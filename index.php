@@ -1,36 +1,10 @@
 <?php
 
-    // Routing
-
     $uri = $_SERVER['REQUEST_URI'];
-    
     $parts = explode('/',rtrim($uri,'/'));
-    // var_dump($parts[1]);die;
-
+  
     require 'vendor/autoload.php';
   
-    //CONNECTION A LA BASE DE DONNEES
-
-    // try
-    // {
-    //     // On se connecte à MySQL
-    //     $bdd = new PDO('mysql:host=localhost;dbname=CSV_DB;charset=utf8', 'root', '');
-    // }
-    // catch(Exception $e)
-    // {
-    //     // En cas d'erreur, on affiche un message et on arrête tout
-    //         die('Erreur : '.$e->getMessage());
-    // }
-
-    // On récupère tout le contenu de la table codeurs
-    
-    // $reponse = $bdd->query('SELECT *
-    // FROM codeurs
-    // INNER JOIN region
-    // ON codeurs.id_region = region.id');
-
-    //Rendu du template
-
     $loader = new Twig_Loader_Filesystem('views');
     $twig = new Twig_Environment($loader, [
 
@@ -38,23 +12,6 @@
 
     ]); 
 
-    
-
-    // $reponse = affichage();
-
-    // while($donnees = $reponse -> fetch()){
-
-    //     print_r($donnees->nom_de_la_manifestation);
-    //     echo('//');
-    // }die;
-
-    //Termine le traitement de la requête
-
-    // $reponse -> closeCurser();
-
-    // var_dump(affichage());die;
-
-    // var_dump(affichage());
     if(($parts[1] == 'projet_data')){
 
         if(isset($parts[2])){
