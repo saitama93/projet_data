@@ -10,7 +10,16 @@
 <!-- {{affichage}} -->
 <h1>ACCUEIL</h1>
 
-<div class="container-fluid">
+{% for item in donnees %}
+
+    <div>
+
+        {{ item.nom_de_la_manifestation}}
+        
+    </div>
+{% endfor%}
+
+<!-- <div class="container-fluid">
     <div class="container">
         <div class="row">
 
@@ -19,7 +28,7 @@
             <div class="col-12">COL-12</div>
         </div>
     </div>
-</div>
+</div> -->
 
 {% endblock %}
 
