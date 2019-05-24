@@ -22,7 +22,9 @@
         <div id="map" class="col-12"></div>
     </div>
 </div>
-{{go}}
+
+
+
 {% endblock %}
 
 
@@ -60,6 +62,7 @@
     //permet d'afficher un repère :
     var icon = L.icon({
         iconUrl: 'http://localhost/projet_data/assets/images/icons/marker.svg',
+        color: 'orange',
         iconSize: [25, 40], //taille du repère
         iconAnchor: [12.5, 46], //ombre
         popupAnchor: [-3, -76 ]

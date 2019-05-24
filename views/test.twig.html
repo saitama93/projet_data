@@ -24,25 +24,17 @@
 
 </main>
 
-{% for i in donnees %}
+{% for item in donnees %}
 
 <div>
 
-    {{ i.nom_de_la_manifestation}}
+    <!-- {{ item.departement}}
+    {{ item.region}} -->
+    {{ item.coordonnees_insee}}
+    
 
 </div>
 {% endfor%}
-
-<!-- <div class="container-fluid">
-    <div class="container">
-        <div class="row">
-
-            <div class="col-6">COL-6</div>
-            <div class="col-6">COL-6</div>
-            <div class="col-12">COL-12</div>
-        </div>
-    </div>
-</div> -->
 
 {% endblock %}
 
