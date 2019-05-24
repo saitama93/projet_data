@@ -1,0 +1,42 @@
+{%extends 'layout.twig.html'%}
+
+
+
+{%block title%} Accueil {% endblock%}
+
+{% block header %}
+<!-- {{affichage}} -->
+<!-- HEADER -->
+<header class="accueil container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+        <a class="navbar-brand" href="#">FESTI'FRANCE</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>       
+    </nav>
+</header>
+{% endblock%}
+
+{% block main %}
+<main>
+
+
+</main>
+
+{% for item in donnees %}
+
+<div>
+
+    <!-- {{ item.departement}}
+    {{ item.region}} -->
+    {{ item.coordonnees_insee}}
+    
+
+</div>
+{% endfor%}
+
+{% endblock %}
+
+
+{% block script %} {% endblock %}
