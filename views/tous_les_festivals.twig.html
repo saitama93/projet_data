@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="assets/css/map.css">
 {% endblock %}
 
-{% block title %} Autour de moi {% endblock %}
+{% block title %} Tous les festivals {% endblock %}
 
 {% block main %}
 
@@ -22,7 +22,7 @@
         <div id="map" class="col-12"></div>
     </div>
 </div>
-
+{{go}}
 {% endblock %}
 
 
@@ -58,15 +58,24 @@
         }).addTo(mymap);
 
     //permet d'afficher un repère :
-    var marker = L.marker([51.5, -0.09], {
-        color: 'red',
-        iconSize: [66, 77],
+    var icon = L.icon({
+        iconUrl: 'http://localhost/projet_data/assets/images/icons/marker.svg',
+        iconSize: [25, 40], //taille du repère
         iconAnchor: [12.5, 46], //ombre
-        popupAnchor: [, ],
-    }).addTo(mymap);
+        popupAnchor: [-3, -76 ]
+    });
 
-   
+    var markerOrange = {icon: icon};
+    
+    L.marker([46.861337, 5.036074], {icon: icon}).addTo(mymap);
+
+
+    {% for item in donnees %}
+    L.marker([{{ item.coordonnees_insee }}], markerOrange).addTo(mymap);
+    {% endfor %}   
+    
 </script>
 
-
 {% endblock %}
+
+
