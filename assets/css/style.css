@@ -3,4 +3,13 @@
   margin: 0;
 }
 
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.container-fluid .container .div-btn .btn-parDate, .container-fluid .container .div-btn .btn-parRegion {
+  width: 50vw;
+}
+
 /*# sourceMappingURL=style.css.map */
