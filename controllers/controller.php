@@ -1,6 +1,6 @@
 <?php
 
-    require 'model/model.php'; //Chargement du model
+    require 'models/model.php'; //Chargement du model
 
     $donnees = affichage(); //Appel de la fonction 
 
