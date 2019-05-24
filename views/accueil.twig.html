@@ -4,19 +4,33 @@
 
 {%block title%} Accueil {% endblock%}
 
-
+{% block header %}
+<!-- {{affichage}} -->
+<!-- HEADER -->
+<header class="accueil container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+        <a class="navbar-brand" href="#">FESTI'FRANCE</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>       
+    </nav>
+</header>
+{% endblock%}
 
 {% block main %}
-<!-- {{affichage}} -->
-<h1>ACCUEIL</h1>
+<main>
+
+
+</main>
 
 {% for i in donnees %}
 
-    <div>
+<div>
 
-        {{ i.nom_de_la_manifestation}}
-        
-    </div>
+    {{ i.nom_de_la_manifestation}}
+
+</div>
 {% endfor%}
 
 <!-- <div class="container-fluid">
@@ -32,5 +46,5 @@
 
 {% endblock %}
 
-{% block script %} {% endblock %}
 
+{% block script %} {% endblock %}

@@ -1,0 +1,26 @@
+/* ******POLICES******* */
+@font-face {
+  font-family: 'Monoton';
+  src: url("../fonts/Monoton-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'Bebas neue cyrillic';
+  src: url("../fonts/Bebas Neue Cyrillic.ttf");
+}
+
+/* ******GENERAL******* */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* ******PAGE ACCUEIL******* */
+}
+
+body .accueil h1 {
+  font-family: 'Monoton';
+  color: red;
+}
+/*# sourceMappingURL=style.css.map */
