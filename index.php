@@ -39,15 +39,15 @@
 
                 case 'autour_de_moi':
                     echo $twig -> render('autour_de_moi.twig.html');
+                    
                 break;
 
-                case 'tout_les_festivals':
-                    echo $twig -> render('tout_les_festivals.twig.html');
+                case 'tous_les_festivals':
+                    echo $twig -> render('tous_les_festivals.twig.html', ['donnees' => $res ]);
                 break;
 
                 
                 case 'contact': 
-
                     echo $twig ->render('contact.twig.html');
                 break;
 
