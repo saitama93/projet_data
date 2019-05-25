@@ -40,10 +40,13 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/style.css">
-
-  {% block CSS_map %} {% endblock %}
-
-  {% block API_leaflet %} {% endblock %}
+  
+  {% block API_leaflet %}
+  {# API leaflet #}
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+  {% endblock %}
 
   <!-- FAVICON -->
   <link rel="icon" type="image/ ico" href="assets/images/favicon.png" />
@@ -52,15 +55,61 @@
 </head>
 {% endblock %}
 
-
-
 <body>
-  <!-- header -->
+  {# HEADER #}
   {% block header %}
-  
-  
-
-
+  {# <nav class="barMenu navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="#">Features</a>
+        <a class="nav-item nav-link" href="#">Pricing</a>
+        <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </div>
+    </div>
+  </nav> #}
+  <div class="container-fluid">
+    <div class="navBar row">
+      <div class="col-3 d-flex justify-content-left">
+        <a href="#">festi'france</a>
+      </div>
+      <div class="col-7 d-flex justify-content-center">        
+          <div id="sideNavigation" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">agenda</a>
+            <a href="#">autour de moi</a>
+            <a href="#">tous les festivals</a>
+            <a href="#">contact</a>
+          </div>        
+      </div>
+      <nav class="topnav col-2 d-flex justify-content-center">
+        <a href="#" onclick="openNav()">
+          <svg width="30" height="30" id="icoOpen">
+            <path d="M0,5 30,5" stroke="#fff" stroke-width="5" />
+            <path d="M0,14 30,14" stroke="#fff" stroke-width="5" />
+            <path d="M0,23 30,23" stroke="#fff" stroke-width="5" />
+          </svg>
+        </a>
+      </nav>
+    </div>
+  </div>
+</nav>
+ {# script pour la barre de nav latérale smartphone #}
+<script>
+  function openNav() {
+      document.getElementById("sideNavigation").style.width = "250px";      
+      document.getElementById("main").style.marginRight = "250px";
+  }
+   
+  function closeNav() {
+      document.getElementById("sideNavigation").style.width = "0";
+      document.getElementById("main").style.marginRight = "0";
+  }
+  </script>
 
   {% endblock %}
 
@@ -76,8 +125,17 @@
   <!-- FOOTER -->
 
   {% block footer %}
-
-
+  <div class="footer container-fluid">
+    <div class="row">
+      <div class="col-6">
+        <a class="credits" href="#">Crédits</a>
+      </div>
+      <div class="col-6">
+        <a class="twitter" href="https://twitter.com/"><img class="img-fluid"
+            src="/assets/images/logo_social/logo_tw.png"></a>
+      </div>
+    </div>
+  </div>
 
   {% endblock %}
 

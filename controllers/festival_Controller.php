@@ -3,7 +3,7 @@
 // FONCTION QUI AFFICHE TOUS LES FESTIVALS
 
 function selectionAllFestival($pdo, $twig){
-    $affich_donnee = $pdo->query('SELECT * FROM liste_festivals');
+    $affich_donnee = $pdo->query('SELECT * FROM liste_festivals LIMIT 2');
 
     $res = $affich_donnee->fetchAll();
 

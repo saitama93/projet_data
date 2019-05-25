@@ -28,10 +28,10 @@ if (($parts[1] == 'projet_data')) {
                 echo $twig->render('accueil.twig.html');
                 break;
 
-                // case 'accueil':
-                //     // echo $twig -> render('accueil.twig.html');
-                //     require 'controllers/controller.php';
-                // break;
+                case 'accueil':
+                    echo $twig -> render('accueil.twig.html');
+                    // require 'controllers/controller.php';
+                break;
 
             case 'agenda':
                 echo $twig->render('agenda.twig.html');
