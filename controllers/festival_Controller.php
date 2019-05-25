@@ -7,24 +7,25 @@ function selectionAllFestival($pdo, $twig){
 
     $res = $affich_donnee->fetchAll();
 
-    echo $twig->render('test.twig.html',[
+    echo $twig->render('tous_les_festivals.html.twig',[
         "donnees" => $res
     ]);
 }
 
 // FONCTION QUI AFFICHE LES INFOS DES FESTIVALS
 
-function affichAllInfoFestivals(){
+function affichAllInfoFestivals($pdo, $twig){
 
-    $affich_donnee = $pdo->query('SELECT date_debut, date_de_fin,nom_de_la_manifestation, site_web, domaine, complement_domaine FROM liste_festivals');
+    $affich_donnee = $pdo->query('SELECT nom_manifestation, date_debut, date_de_fin, site_web, domaine, complement_domaine FROM liste_festivals');
     $res = $affich_donnee->fetchAll();
 
-    echo $twig->render('tous_les_festivals.twig.html',[
+    echo $twig->render('test.html.twig',[
 
         "donnees" => $res
 
     ]);
 }
+// function afficheAllInfosFestivals
 
 
 

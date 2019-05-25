@@ -1,4 +1,4 @@
-{% extends 'layout.twig.html' %}
+{% extends 'layout.html.twig' %}
 
 
 {% block API_leaflet %}
@@ -20,9 +20,15 @@
 <div class="container-fluid">
     <div class="row">
         <div id="map" class="col-12"></div>
+        
+        {% for i in donnees %}
+       <p> {{i.commune_principale}}</p>
+        {% endfor %}
     </div>
 </div>
-{{go}}
+
+
+
 {% endblock %}
 
 
@@ -47,6 +53,7 @@
 
 <script>
     var mymap = L.map('map').setView([45.756837, 3.239749], 6.71);
+    
     //permet d'afficher la map :
     L.tileLayer(
         'https://api.mapbox.com/styles/v1/mgaaintjrae/cjw1s9oo30hlo1co1l7mgq804/tiles/256/{z}/{x}/{y}?&access_token=pk.eyJ1IjoibWdhYWludGpyYWUiLCJhIjoiY2p3MXMzMzJqMG4xcDQwa3Q1a25heGtnbyJ9.DMXg-P_uxnVml82Ki6SmUQ#10.0/42.362400/-71.020000/0}'
@@ -59,7 +66,8 @@
 
     //permet d'afficher un repère :
     var icon = L.icon({
-        iconUrl: 'http://localhost/projet_data/assets/images/icons/marker.svg',
+        iconUrl: 'http://localhost/projet_data/assets/images/icons/marker_orange.svg',
+        color: 'orange',
         iconSize: [25, 40], //taille du repère
         iconAnchor: [12.5, 46], //ombre
         popupAnchor: [-3, -76 ]
@@ -67,12 +75,13 @@
 
     var markerOrange = {icon: icon};
     
-    L.marker([46.861337, 5.036074], {icon: icon}).addTo(mymap);
+    // L.marker([46.861337, 5.036074], {icon: icon}).addTo(mymap);
 
 
-    {% for item in donnees %}
-    L.marker([{{ item.coordonnees_insee }}], markerOrange).addTo(mymap);
+    {% for i in donnees %}
+    L.marker([{{ i.coordonnees_insee }}], markerOrange).addTo(mymap);
     {% endfor %}   
+    
     
 </script>
 
