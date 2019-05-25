@@ -5,13 +5,17 @@
 {% block title %} Cartes pop-up {% endblock %}
 
 {% block header %}
-{# <!-- {{affichage}} --> #}
-<!-- HEADER -->
+
+{# HEADER #}
+
 <header class="accueil container-fluid">
+
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+
         <a class="navbar-brand" href="#">LOGO</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            
             <span class="navbar-toggler-icon"></span>
         </button>       
     </nav>
@@ -19,36 +23,42 @@
 {% endblock%}
 
 {% block main %}
+
+{# MAIN #}
+
 <main>
 
 <h1> Cartes pop-up</h1>
+
 {% for i in donnees %}
+
 <div>
 
-     <div class="container-fluid">
+    <div class="container-fluid">
         
         <div class="container">
         
             <div class="row">
                 
                 <div class="col-12">                         
-                        <h3>{{i.nom_manifestation}}</h3>
+                        
+                    <h3>{{i.nom_manifestation}}</h3>
+                    
                     <p>
                         Date de début: {{i.date_debut}} <br> Date de fin: {{i.date_de_fin}} <br> 
                         Domaine: {{i.domaine}} <br> Complément domaine: {{i.complement_domaine}} <br>
-                        Site web: <a href={{i.site_web}}>{{i.site_web}}</a><br>
+                        Site web: <a href={{i.site_web}} target="_blank">{{i.site_web}}</a><br>
                     </p>
                 </div>
             </div>
         </div>
     </div>
-    
-
 </div>
 {% endfor %}
 </main>
 
 {% endblock %}
 
+{# SCRIPT #}
 
 {% block script %} {% endblock %}

@@ -30,7 +30,12 @@ function affichAllInfoFestivals($pdo, $twig){
 
 function affichJuin($pdo, $twig){
 
-    $affich_donnee = $pdo->query('SELECT * FROM liste_festivals WHERE ');
+    $affich_donnee = $pdo->query(
+        
+        'SELECT * FROM liste_festivals WHERE mois_indicatif ="Juin" UNION
+        SELECT * FROM liste_festivals WHERE date_debut BETWEEN "01/06/2019" AND "30/06/2019" UNION
+        SELECT * FROM liste_festivals WHERE date_de_fin BETWEEN "01/06/2019" AND "30/06/2019"
+    ');
     $res = $affich_donnee->fetchAll();
 
     echo $twig->render('juin.html.twig',[

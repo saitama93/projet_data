@@ -59,7 +59,7 @@ if (($parts[1] == 'projet_data')) {
             case 'juin':
                 require_once("models/connexion_bdd.php");
                 require_once("controllers/festival_Controller.php");
-                affichAllInfoFestivals($pdo, $twig);
+                affichJuin($pdo, $twig);
             break;
 
 

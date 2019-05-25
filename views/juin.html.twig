@@ -1,0 +1,37 @@
+{% extends "layout.html.twig" %}
+
+{% block title %} Juin {% endblock %}
+
+{% block main %}
+<h1>Pour le mois de juin</h1>
+
+{% for i in donnees %}
+
+<div>
+
+    <div class="container-fluid">
+        
+        <div class="container">
+        
+            <div class="row">
+                
+                <div class="col-12">                         
+                        
+                    <h3>{{i.nom_manifestation}}</h3>
+                    
+                    <p>
+                        Date de début: {{i.date_debut}} <br> Date de fin: {{i.date_de_fin}} <br> 
+                        Domaine: {{i.domaine}} <br> Complément domaine: {{i.complement_domaine}} <br>
+                        Site web: <a href={{i.site_web}} target="_blank">{{i.site_web}}</a><br>
+                        Mois: {{i.mois_indicatif}} <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+</main>
+
+
+{% endblock %}
