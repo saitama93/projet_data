@@ -16,10 +16,24 @@ function selectionAllFestival($pdo, $twig){
 
 function affichAllInfoFestivals($pdo, $twig){
 
-    $affich_donnee = $pdo->query('SELECT nom_manifestation, date_debut, date_de_fin, site_web, domaine, complement_domaine FROM liste_festivals');
+    $affich_donnee = $pdo->query('SELECT * FROM liste_festivals');
     $res = $affich_donnee->fetchAll();
 
-    echo $twig->render('test.html.twig',[
+    echo $twig->render('pop-up.html.twig',[
+
+        "donnees" => $res
+
+    ]);
+}
+
+// FONCTION QUI AFFICHE LES INFOS DU MOIS DE JUIN
+
+function affichJuin($pdo, $twig){
+
+    $affich_donnee = $pdo->query('SELECT * FROM liste_festivals WHERE ');
+    $res = $affich_donnee->fetchAll();
+
+    echo $twig->render('juin.html.twig',[
 
         "donnees" => $res
 

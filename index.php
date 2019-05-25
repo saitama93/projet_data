@@ -50,7 +50,13 @@ if (($parts[1] == 'projet_data')) {
                 selectionAllFestival($pdo, $twig);
                 break;
 
-            case 'test':
+            case 'pop-up':
+                require_once("models/connexion_bdd.php");
+                require_once("controllers/festival_Controller.php");
+                affichAllInfoFestivals($pdo, $twig);
+            break;
+
+            case 'juin':
                 require_once("models/connexion_bdd.php");
                 require_once("controllers/festival_Controller.php");
                 affichAllInfoFestivals($pdo, $twig);
