@@ -1,0 +1,41 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+Accueil 
+{% endblock %}
+
+
+{% block header %}
+<div id="background">
+  <nav class="navbar navbar-expand-lg navbar-light " id="barMenuAccueil">
+    <a class="navbar-brand" href="#"><span>FESTI'FRANCE</span></a>
+    {# <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> #}
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="#">Accueil <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="#">Agenda</a>
+        <a class="nav-item nav-link" href="#">Autour de moi</a>
+        <a class="nav-item nav-link" href="#">Tous les festivals</a>
+        <!--disabled après link pour effet effacé  -->
+        <a class="nav-item nav-link" href="#">Contact</a>
+      </div>
+    </div>
+  </nav>
+{% endblock %}
+
+{% block main %}
+<div id="logo_text_accueil">
+    <img id= "logo_accueil" src="assets/images/logo_accueil.png">
+    <p>FESTI'FRANCE</p>
+    <h2> ne reste pas chez toi cet été! trouve ton festoch' facilement grâce à festi'france!</h2>
+
+{% endblock %}
+
+{% block footer %}
+</div>
+{% endblock %}
+
+{% block script %}{{ parent() }}{% endblock %}

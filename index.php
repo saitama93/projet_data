@@ -25,7 +25,6 @@ if (($parts[1] == 'projet_data')) {
         switch ($parts[2]) {
 
             case '':
-
                 echo $twig->render('accueil.html.twig');
                 break;
 
@@ -49,40 +48,38 @@ if (($parts[1] == 'projet_data')) {
                 require_once("models/connexion_bdd.php");
                 require_once("controllers/festival_Controller.php");
                 selectionAllFestival($pdo, $twig);
-                break;
-
-            case 'pop-up':
-
-                require_once("models/connexion_bdd.php");
-                require_once("controllers/festival_Controller.php");
-                affichAllInfoFestivals($pdo, $twig);
             break;
 
-            case 'juin':
+            // case 'juin':
+            //     require_once("models/connexion_bdd.php");
+            //     require_once("controllers/festival_Controller.php");
+            //     affichJuin($pdo, $twig);
+            //     break;
 
+            case 'contact':
+                echo $twig->render('contact.html.twig');
+            break;
+
+            case 'form':
                 require_once("models/connexion_bdd.php");
                 require_once("controllers/festival_Controller.php");
-                affichJuin($pdo, $twig);
+                selectionSearchFestival($pdo, $twig);
+
             break;
 
             case 'test':
+               echo $twig->render('test.html.twig');
 
-                echo $twig->render('test.html.twig');
             break;
 
-            case 'contact':
-
-                echo $twig->render('contact.html.twig');
-                break;
 
             default:
-
                 header('HTTP/1.0 404 Not Found');
                 echo $twig->render('404.html.twig');
-                break;
+            break;
         }
     } else {
 
-        echo $twig->render('pop-up.html.twig');
+        echo $twig->render('accueil.html.twig');
     }
 }
