@@ -1,3 +1,7 @@
+AuthName "Page d'administration protégée"
+AuthType Basic
+AuthUserFile "C:/xampp/htdocs/projet_data/.htpasswd"
+Require valid-user
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

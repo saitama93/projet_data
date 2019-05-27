@@ -1,4 +1,6 @@
-/* orange #EF752B rgb(239, 117,43)*/
+/* orange  rgb(239, 117,43)*/
+$orange: #EF752B;
+
 * {
     margin: 0;
     padding: 0;
@@ -20,9 +22,9 @@ span {
     color: white;
 }
 
-#logo_accueil {
-    //height: 400px;
-}
+// #logo_accueil {
+//     height: 400px;
+// }
 
 #background {
     background-image: url("../images/background_accueil.jpg");
@@ -30,7 +32,12 @@ span {
     background-size: 100%;
     background-repeat: no-repeat;
 
+    
+
     #barMenuAccueil {
+        @media (max-width: 992px) {
+            display: block;
+        }
         #navbarNavAltMarkup {
             .navbar-nav {
                 width: 100%;
@@ -44,40 +51,38 @@ span {
     }
 }
 
-// .barMenu {
-//     background-color: rgba(0, 0, 0, 0.8);
-//     #navbarNavAltMarkup {
-//         .navbar-nav {
-//             // width: 100%;
-
-//             a {
-//                 margin-left: 10%;
-//                 color: white;
-//             }
-//         }
-//     }   
-//     .navbar-toggle{
-//         .icon-bar {
-//             width: 22px;
-//             -webkit-transition: all 0.2s;
-//             transition: all 0.2s;
-//         }
-
-//     }     
-// } 
-#map{
+// Taille carte de France
+#map {
     position: fixed;
     height: 95vh;
-    
-}   
+}
 
-.navBar {
-    align-items: center;
-    height: 55px;
-    background-color: #333;
-    overflow: hidden;
+// barre de navigation AUTOUR DES FESTIVALS 
+#navbarADM {
+    @media (min-width: 992px) {
+        display: none;
+    }
 
-    @media screen and (max-height: 975px) {
+    .navBar {
+        align-items: center;
+        height: 55px;
+        background-color: black;
+        overflow: hidden;
+
+        span {
+            font-size: 30px;
+        }
+
+        .menuTop {
+            justify-content: space-between;
+            a{
+                @media (min-width: 992px) {
+                    display: none;
+                }
+            }
+            
+        }
+
         .topnav {
             a {
                 float: left;
@@ -88,36 +93,44 @@ span {
                 text-decoration: none;
                 font-size: 17px;
             }
+
+            a:hover,
+            a:focus {
+                color: #f1f1f1;
+            }
         }
 
-
         .sidenav {
+            cursor: pointer;
             height: 100%;
-            /* 100% Full-height */
             width: 0;
-            /* 0 width - change this with JavaScript */
             position: fixed;
-            /* Stay in place */
             z-index: 1;
-            /* Stay on top */
             top: 0;
             right: 0;
-            background-color: #111;
-            /* Black*/
+            background-color: rgba(0, 0, 0, .9);
             overflow-x: hidden;
-            /* Disable horizontal scroll */
             padding-top: 60px;
-            /* Place content 60px from the top */
             transition: 0.5s;
 
-            /* 0.5 second transition effect to slide in the sidenav */
+            // Icones de la navbar latérale
+            #icon {
+                position: relative;
+                left: -26px;
+            }
+
+            .menu {
+                border-bottom: 1px solid rgba(239, 117, 43, .8);
+                padding: 55px 65px;
+            }
+
             a {
                 padding: 8px 8px 8px 32px;
                 text-decoration: none;
                 font-size: 25px;
                 color: #818181;
                 display: block;
-                transition: 0.3s
+                transition: 0.3s;
             }
 
             a:hover,
@@ -126,10 +139,11 @@ span {
             }
 
             .closebtn {
+                cursor: pointer;
                 position: absolute;
-                top: 0;
-                left: 25px;
-                font-size: 36px;
+                top: -42px;
+                right: 0;
+                font-size: 83px;
                 margin-right: 50px;
             }
 
@@ -137,13 +151,111 @@ span {
     }
 }
 
+// Header page TOUS LES FESTIVALS
+.navTousLesFestivals {
+    height: 55px;
+    background-color: black;
+    align-items: center;
+    position: relative;
+
+    a:hover {
+        color: $orange;
+    }
+
+    h1 {
+        display: contents;
+        font-size: 30px;
+        color: #f1f1f1;
+    }
+}
+
+//Barre de recherche TOUS LES FESTIVALS
+#navbarTLF {
+    @media (min-width: 992px) {
+        display: none;
+    }
+
+    .sideSearch {
+        //display: none;
+        cursor: pointer;
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        top: 54px;
+        background-color: rgba(92, 91, 91, 0.9);
+        overflow-x: hidden;
+        margin-top: 54px;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+
+        .parDate {
+            border-right: 1px solid rgba(173, 173, 173, 0.8);
+            border-bottom: 1px solid rgba(173, 173, 173, 0.8);
+        }
+
+        .parRegion {
+            border-bottom: 1px solid rgba(173, 173, 173, 0.8);
+
+        }
+
+        .inputSearch {
+            position: relative;
+
+            .fa-search:before {
+                content: "\f002";
+                position: absolute;
+                top: 12px;
+                left: 20px;
+
+            }
+        }
+    }
+}
+
+
+
+
+
 .footer {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
     height: 60px;
     position: absolute;
-    bottom: 0;    
-    a {
-        margin-left: 10%;
-        color: grey;
+    bottom: 0;
+
+    .row {
+        .credits {
+            a {
+                color: grey;
+            }
+
+            a:hover {
+                color: white;
+                text-decoration: none;
+            }
+        }
+
+        .copyright {
+            text-align: center;
+            color: grey;
+        }
+
+        .social {
+            text-align: end;
+
+            a {
+
+                .twitter {
+                    width: 7%;
+                }
+
+                .facebook {
+                    margin-left: 3%;
+                    width: 8%;
+                }
+            }
+        }
     }
+
 }
