@@ -44,11 +44,13 @@
                         
                     <h3>{{i.nom_manifestation}}</h3>
                     
-                    <p>
+                    <p id="{{i.id}}">
                         Date de début: {{i.date_debut}} <br> Date de fin: {{i.date_de_fin}} <br> 
                         Domaine: {{i.domaine}} <br> Complément domaine: {{i.complement_domaine}} <br>
                         Site web: <a href={{i.site_web}} target="_blank">{{i.site_web}}</a><br>
+                        {{i.id}}
                     </p>
+                  
                 </div>
             </div>
         </div>

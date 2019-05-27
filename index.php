@@ -25,17 +25,17 @@ if (($parts[1] == 'projet_data')) {
         switch ($parts[2]) {
 
             case '':
+
                 echo $twig->render('accueil.html.twig');
                 break;
 
                 case 'accueil':
                 
-                    require_once("models/connexion_bdd.php");
-                    require_once("controllers/festival_Controller.php");
-                    affichAllInfoFestivals($pdo, $twig);
+                   echo $twig->render('accueil.html.twig');
                 break;
 
             case 'agenda':
+
                 echo $twig->render('agenda.html.twig');
                 break;
 
@@ -45,25 +45,33 @@ if (($parts[1] == 'projet_data')) {
                 break;
 
             case 'tous_les_festivals':
+
                 require_once("models/connexion_bdd.php");
                 require_once("controllers/festival_Controller.php");
                 selectionAllFestival($pdo, $twig);
                 break;
 
             case 'pop-up':
+
                 require_once("models/connexion_bdd.php");
                 require_once("controllers/festival_Controller.php");
                 affichAllInfoFestivals($pdo, $twig);
             break;
 
             case 'juin':
+
                 require_once("models/connexion_bdd.php");
                 require_once("controllers/festival_Controller.php");
                 affichJuin($pdo, $twig);
             break;
 
+            case 'test':
+
+                echo $twig->render('test.html.twig');
+            break;
 
             case 'contact':
+
                 echo $twig->render('contact.html.twig');
                 break;
 
@@ -75,6 +83,6 @@ if (($parts[1] == 'projet_data')) {
         }
     } else {
 
-        echo $twig->render('accueil.html.twig');
+        echo $twig->render('pop-up.html.twig');
     }
 }

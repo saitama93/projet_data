@@ -44,7 +44,18 @@ function affichJuin($pdo, $twig){
 
     ]);
 }
-// function afficheAllInfosFestivals
+// function pop-up
 
+function affichPopUp($pdo, $twig){
+
+    $affich_donnee = $pdo->query('SELECT * FROM liste_festivals');
+    $res = $affich_donnee->fetchAll();
+
+    echo $twig->render('test.html.twig',[
+
+        "donnees" => $res
+
+    ]);
+}
 
 
