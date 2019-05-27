@@ -1,5 +1,31 @@
+/* orange #ef752b rgb(239, 117,43)*/
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-family: 'Bebas neue cyrillic'; }
+
+@font-face {
+  font-family: 'Monoton';
+  src: url("../fonts/Monoton-Regular.ttf"); }
+@font-face {
+  font-family: 'Bebas neue cyrillic';
+  src: url("../fonts/Bebas Neue Cyrillic.ttf"); }
+span {
+  font-family: 'Monoton';
+  color: white; }
+
+#background {
+  background-image: url("../images/background_accueil.jpg");
+  height: 400px;
+  background-size: 100%;
+  background-repeat: no-repeat; }
+  #background #barMenu #navbarNavAltMarkup .navbar-nav {
+    width: 100%; }
+    #background #barMenu #navbarNavAltMarkup .navbar-nav a {
+      margin-left: 10%;
+      color: white; }
+
+#logo_text_accueil h2 {
+  color: white; }
 
 /*# sourceMappingURL=style.css.map */

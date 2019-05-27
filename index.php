@@ -23,7 +23,6 @@
                 break;
 
                 case 'accueil':
-                    // echo $twig -> render('accueil.twig.html');
                     require 'controllers/controller.php';
                 break;
 
@@ -35,18 +34,15 @@
                     echo $twig -> render('autour_de_moi.twig.html');
                 break;
 
-                case 'tout_les_festivals':
-                    echo $twig -> render('tout_les_festivals.twig.html');
+                case 'tous_les_festivals':
+                    echo $twig -> render('tous_les_festivals.twig.html');
                 break;
 
-                
                 case 'contact': 
-
                     echo $twig ->render('contact.twig.html');
                 break;
 
                 default: 
-
                     header('HTTP/1.0 404 Not Found');
                     echo $twig -> render ('404.twig.html');
                 break;
