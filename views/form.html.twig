@@ -28,26 +28,28 @@
         {% for i in donnees %}
             
             {{i.nom_manifestation}}<br>
+            id: {{i.id}}<br>
         {% endfor %}
 
 
+     
+        
+{#         
          <script>
-            
+             $.ajax({
+                 url: "",
+                 type: "POST",
+                 dataType: "html",
+                 data: {
+                 'nom': document.querySelector('#nom').value,
+                 'email': document.querySelector('#email').value,
+                 'message': document.querySelector('#message').value
+                 },
+                 success: function (data, status) {
+                 console.log("OKKKKKK");
+                 }
 
-        //     $.ajax({
-        //         url: "",
-        //         type: "POST",
-        //         dataType: "html",
-        //         data: {
-        //         'nom': document.querySelector('#nom').value,
-        //         'email': document.querySelector('#email').value,
-        //         'message': document.querySelector('#message').value
-        //         },
-        //         success: function (data, status) {
-        //         console.log("OKKKKKK");
-        //         }
-
-        //     });
-        // </script>
+             });
+         </script> #}
 
 {% endblock %}
