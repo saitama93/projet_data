@@ -28,10 +28,10 @@ if (($parts[1] == 'projet_data')) {
                 echo $twig->render('accueil.html.twig');
                 break;
 
-                case 'accueil':
-                    echo $twig -> render('accueil.html.twig');
-                    // require 'controllers/controller.php';
-                break;           
+            case 'accueil':
+                echo $twig->render('accueil.html.twig');
+                // require 'controllers/controller.php';
+                break;
 
             case 'agenda':
                 echo $twig->render('agenda.html.twig');
@@ -45,17 +45,15 @@ if (($parts[1] == 'projet_data')) {
             case 'tous_les_festivals':
                 require_once("models/connexion_bdd.php");
                 require_once("controllers/festival_Controller.php");
-                selectionAllFestival($pdo, $twig);
+                selectionSearchFestival($pdo, $twig);
                 break;
-
-            // case 'juin':
-            //     require_once("models/connexion_bdd.php");
-            //     require_once("controllers/festival_Controller.php");
-            //     affichJuin($pdo, $twig);
-            //     break;
 
             case 'contact':
                 echo $twig->render('contact.html.twig');
+                break;
+
+            case 'contact_ajax':
+                require_once("controllers/mail_controller.php");
                 break;
 
             default:

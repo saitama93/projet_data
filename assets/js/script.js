@@ -21,11 +21,7 @@ var mymap = L.map('map').setView([45.756837, 3.239749], 6.4);
         popupAnchor: [-3, -76 ]
     });
     var markerOrange = {icon: icon};
-    
-   L.marker([46.861337, 5.036074], {icon: icon}).addTo(mymap);
-    {% for i in donnees %}
-    L.marker([{{ i.coordonnees_insee }}], markerOrange).addTo(mymap);
-    {% endfor %} 
+  
 
 /* ***********************************************************************
  *************************MAP PAGE AUTOUR DE MOI***************************

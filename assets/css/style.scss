@@ -20,6 +20,7 @@ $orange: #EF752B;
 span {
     font-family: 'Monoton';
     color: white;
+    font-size: 30px;
 }
 
 // #logo_accueil {
@@ -32,12 +33,10 @@ span {
     background-size: 100%;
     background-repeat: no-repeat;
 
-    
+
 
     #barMenuAccueil {
-        @media (max-width: 992px) {
-            display: block;
-        }
+
         #navbarNavAltMarkup {
             .navbar-nav {
                 width: 100%;
@@ -49,7 +48,50 @@ span {
             }
         }
     }
+
 }
+
+.nav-link {
+    display: block;
+}
+
+@media screen and (max-width:992px) {
+    #barMenuAccueil {
+        display: none;
+        background-color: black;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg {
+        background-color: black;
+    }
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+    padding: 0px 40px;
+    font-size: 23px;
+}
+
+@media screen and (max-width: 1024px) {
+    .navbar-light .navbar-nav .nav-link {
+        padding: 0px 30px;
+        font-size: 20px;
+    }
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: rgba(239, 117, 43, 0.8);
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-collapse {
+        justify-content: center;
+
+    }
+}
+
 
 // Taille carte de France
 #map {
@@ -57,11 +99,10 @@ span {
     height: 95vh;
 }
 
-// barre de navigation AUTOUR DES FESTIVALS 
+// barre de navigation AUTOUR DE MOI 
 #navbarADM {
-    @media (min-width: 992px) {
-        display: none;
-    }
+
+
 
     .navBar {
         align-items: center;
@@ -69,18 +110,29 @@ span {
         background-color: black;
         overflow: hidden;
 
+
         span {
+            font-family: 'bebas neue cyrillic' !important;
             font-size: 30px;
+            color: white;
         }
+
 
         .menuTop {
             justify-content: space-between;
-            a{
+
+            a {
                 @media (min-width: 992px) {
                     display: none;
                 }
             }
-            
+
+        }
+
+        @media screen and (max-width:992px) {
+            .menuTop {
+                display: none;
+            }
         }
 
         .topnav {
@@ -151,8 +203,18 @@ span {
     }
 }
 
+
+@media screen and(min-width: 992px) {
+    #navbarADM {
+        display: none;
+    }
+}
+
+
 // Header page TOUS LES FESTIVALS
 .navTousLesFestivals {
+
+
     height: 55px;
     background-color: black;
     align-items: center;
@@ -170,51 +232,205 @@ span {
 }
 
 //Barre de recherche TOUS LES FESTIVALS
-#navbarTLF {
-    @media (min-width: 992px) {
-        display: none;
+.mycluster {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: rgb(239, 117, 43);
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    line-height: 40px;
+    margin-top: -20px;
+    margin-left: -20px;
+}
+
+.sideSearch {
+
+    // display: none;
+    cursor: pointer;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    top: 54px;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    margin-top: 54px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+
+    .col-6 {
+        text-align: center;
+        font-size: 20px;
+
+
+        a {
+            color: rgba(173, 173, 173, 0.8);
+            text-decoration: none;
+        }
+
+
     }
 
-    .sideSearch {
-        //display: none;
-        cursor: pointer;
+    .bordure {
+        border-bottom: 2px solid rgba(173, 173, 173, 0.8);
         width: 100%;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        top: 54px;
-        background-color: rgba(92, 91, 91, 0.9);
-        overflow-x: hidden;
-        margin-top: 54px;
-        -webkit-transition: 0.5s;
-        transition: 0.5s;
 
-        .parDate {
-            border-right: 1px solid rgba(173, 173, 173, 0.8);
-            border-bottom: 1px solid rgba(173, 173, 173, 0.8);
-        }
+    }
 
-        .parRegion {
-            border-bottom: 1px solid rgba(173, 173, 173, 0.8);
+    .closebtn {
+        cursor: pointer;
+        font-size: 42px;
+        color: rgba(239, 117, 43, .8);
+    }
 
-        }
+    #btn {
+        margin: 15px;
+        padding: 7px 30px;
+        background-color: black;
+        border: none;
+        color: white;
+        font-size: 30px;
+    }
 
-        .inputSearch {
-            position: relative;
-
-            .fa-search:before {
-                content: "\f002";
-                position: absolute;
-                top: 12px;
-                left: 20px;
-
-            }
-        }
+    #btn:hover {
+        color: rgb(239, 117, 43);
     }
 }
 
 
 
+
+
+@media screen and (min-width:992px) {
+    #navbarTLF {
+        display: none;
+    }
+}
+
+/***************** PAGE CONTACT*****************************/
+#mainWrapContact {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(239, 117, 43);
+    height: 90vh;
+
+    #boxRightContact {
+        width: 50%;
+
+        @media screen and (max-width: 992px) {
+            width: 100%;
+        }
+
+
+        #blocForm {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background-color: rgb(239, 117, 43);
+
+            h1 {
+                margin-top: 5%;
+                margin-bottom: 5%;
+                text-align: center;
+                color: white;
+            }
+
+            input,
+            textarea {
+                width: 90%;
+                border: none;
+                border-left: 2px solid grey;
+                margin-left: 3%;
+            }
+
+            i {
+                font-size: 200%;
+                margin-top: 30%;
+            }
+
+            .boxInput {
+                display: flex;
+                flex-direction: row;
+                background-color: white;
+                height: 60px;
+                width: 90%;
+                padding-left: 2%;
+                padding-top: 1%;
+            }
+
+            ::placeholder {
+                font-size: 200%;
+                padding-left: 5%;
+            }
+
+            #boxMessage {
+                display: flex;
+                flex-direction: row;
+                background-color: white;
+                height: 150px;
+                width: 90%;
+                padding-left: 2%;
+                padding-top: 1%;
+            }
+
+            #btnEnvoyer {
+                background-color: black;
+                width: 50%;
+                padding-top: 3%;
+
+                p {
+                    color: white;
+                    font-size: 220%;
+                }
+            }
+
+            #btnEnvoyer:hover {
+                cursor: pointer;
+            }
+
+        }
+
+        /* #blocForm */
+    }
+
+    /*boxRightContact*/
+
+    #boxLeftContact {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        @media screen and (max-width: 992px) {
+            display: none;
+        }
+
+        #logoContact {
+            margin-top: 15%;
+        }
+
+        p {
+            font-size: 250%;
+            text-align: center;
+            margin-top: 5%;
+        }
+    }
+
+    #popUpContact {
+        height: 300px;
+        width: 500px;
+        background-color: red;
+        position: absolute;
+        margin-top: 5%;
+        margin-left: 35%;
+        display: none;
+    }
+}
+
+/* #mainWrapContact*/
 
 
 .footer {
@@ -223,6 +439,7 @@ span {
     height: 60px;
     position: absolute;
     bottom: 0;
+    margin-top: 20px;
 
     .row {
         .credits {
@@ -231,7 +448,7 @@ span {
             }
 
             a:hover {
-                color: white;
+                color: rgba(239, 117, 43, 0.8);
                 text-decoration: none;
             }
         }
@@ -247,12 +464,12 @@ span {
             a {
 
                 .twitter {
-                    width: 7%;
+                    width: 12%;
                 }
 
                 .facebook {
                     margin-left: 3%;
-                    width: 8%;
+                    width: 15%;
                 }
             }
         }

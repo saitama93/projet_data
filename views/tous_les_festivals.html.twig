@@ -1,140 +1,181 @@
 {% extends 'layout.html.twig' %}
 
 
-{% block API_leaflet %}{{ parent() }}{% endblock %}
+{% block API_leaflet %}
+    {{ parent() }}
+{% endblock %}
 
-{% block title %} Tous les festivals {% endblock %}
+{% block title %}
+    Tous les festivals
+{% endblock %}
 
 {% block header %}
-<div id="navbarTLF" class="container-fluid">
-    <div class="navTousLesFestivals row ">
-        <div class="col-1 d-flex justify-content-center">
-            {# icone accueil #}
-            <a class="accueil" href="#"><svg version="1.1" id="icon" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px"
-                    viewBox="0 0 611.997 611.998" style="enable-background:new 0 0 611.997 611.998;"
-                    xml:space="preserve">
-                    <g>
-                        <path d="M511.114,300.251c-9.94,0-17.638,7.663-17.638,17.651v241.105H368.401v-98.453c0-9.236-7.697-17.31-17.002-17.31h-90.435
-                       c-9.948,0-17.96,8.073-17.96,17.31v98.453h-124.76v-233.1c0-9.306-7.69-17.036-17.638-17.036c-9.298,0-16.995,7.73-16.995,17.036
-                       v250.752c0,9.305,7.697,17.036,16.995,17.036h160.358c9.298,0,16.995-7.731,16.995-17.036v-98.454h55.801v98.454
-                       c0,9.305,7.697,17.036,17.639,17.036h159.715c9.299,0,16.995-7.731,16.995-17.036V317.903
-                       C528.109,307.915,520.413,300.251,511.114,300.251z" stroke="#fff" stroke-width="20" />
-                        <path
-                            d="M607.003,314.003L467.819,174.225V78.919c0-9.921-8.019-17.583-17.96-17.583c-9.305,0-17.001,7.663-17.001,17.583v60.345
-                       L318.046,23.774c-3.518-3.558-7.697-5.474-11.864-5.474c-4.81,0-8.983,1.984-12.507,5.474L5.361,312.087
-                       c-6.917,6.91-7.375,17.994,0,24.357c6.411,7.389,17.454,6.91,24.371,0l276.45-275.793l275.807,278.393
-                       c2.873,2.874,7.054,4.516,12.507,4.516c4.81,0,8.976-1.642,12.507-4.516C613.42,332.613,613.899,320.982,607.003,314.003z"
-                            stroke="#fff" stroke-width="20" />
-                    </g>
-                </svg></a>
+    <nav class="navbar navbar-expand-lg navbar-light " id="barMenuAccueil">
+        <a class="navbar-brand" href="#">
+            <span>FESTI'FRANCE</span>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="accueil">Accueil</a>
+                <a class="nav-item nav-link" href="agenda">Agenda</a>
+                <a class="nav-item nav-link" href="autour_de_moi">Autour de moi</a>
+                <a class="nav-item nav-link" href="tous_les_festivals">Tous les festivals</a>
+                <a class="nav-item nav-link" href="contact">Contact</a>
+            </div>
         </div>
-        <div class="col-10 d-flex justify-content-center">
-            <h1>tous les festivals</h1>
-        </div>
-        {# icone recherche #}
-        <div class="col-1 d-flex justify-content-center">
-            <a class="recherche" onclick="openRecherche()" href="#"><svg xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="20px"
-                    height="20px" viewBox="0 0 250.313 250.313" style="enable-background:new 0 0 250.313 250.313;"
-                    xml:space="preserve" width="250.31300354003906" height="250.31300354003906">
-                    <g id="Search">
-                        <path style="fill-rule:evenodd;clip-rule:evenodd;" d="M244.186,214.604l-54.379-54.378c-0.289-0.289-0.628-0.491-0.93-0.76   
-                        c10.7-16.231,16.945-35.66,16.945-56.554C205.822,46.075,159.747,0,102.911,0S0,46.075,0,102.911   
-                        c0,56.835,46.074,102.911,102.91,102.911c20.895,0,40.323-6.245,56.554-16.945c0.269,0.301,0.47,0.64,0.759,0.929l54.38,54.38   
-                        c8.169,8.168,21.413,8.168,29.583,0C252.354,236.017,252.354,222.773,244.186,214.604z M102.911,170.146   
-                        c-37.134,0-67.236-30.102-67.236-67.235c0-37.134,30.103-67.236,67.236-67.236c37.132,0,67.235,30.103,67.235,67.236   
-                        C170.146,140.044,140.043,170.146,102.911,170.146z" stroke="#fff" stroke-width="20" />
-                    </g>
-                </svg></a>
+    </nav>
+    <div class="container-fluid" id="navbarTLF">
+        <div class="navTousLesFestivals row ">
+            <div
+                class="col-1 d-flex justify-content-center">
+                {# icone accueil #}
+                <a class="accueil" href="accueil">
+                    <svg height="20px" id="icon" style="enable-background:new 0 0 611.997 611.998;" version="1.1" viewbox="0 0 611.997 611.998" width="20px" x="0px" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
+                        <g>
+                            <path d="M511.114,300.251c-9.94,0-17.638,7.663-17.638,17.651v241.105H368.401v-98.453c0-9.236-7.697-17.31-17.002-17.31h-90.435
+                                    c-9.948,0-17.96,8.073-17.96,17.31v98.453h-124.76v-233.1c0-9.306-7.69-17.036-17.638-17.036c-9.298,0-16.995,7.73-16.995,17.036
+                                    v250.752c0,9.305,7.697,17.036,16.995,17.036h160.358c9.298,0,16.995-7.731,16.995-17.036v-98.454h55.801v98.454
+                                    c0,9.305,7.697,17.036,17.639,17.036h159.715c9.299,0,16.995-7.731,16.995-17.036V317.903
+                                    C528.109,307.915,520.413,300.251,511.114,300.251z" stroke-width="20" stroke="#fff"/>
+                            <path d="M607.003,314.003L467.819,174.225V78.919c0-9.921-8.019-17.583-17.96-17.583c-9.305,0-17.001,7.663-17.001,17.583v60.345
+                                    L318.046,23.774c-3.518-3.558-7.697-5.474-11.864-5.474c-4.81,0-8.983,1.984-12.507,5.474L5.361,312.087
+                                    c-6.917,6.91-7.375,17.994,0,24.357c6.411,7.389,17.454,6.91,24.371,0l276.45-275.793l275.807,278.393
+                                    c2.873,2.874,7.054,4.516,12.507,4.516c4.81,0,8.976-1.642,12.507-4.516C613.42,332.613,613.899,320.982,607.003,314.003z" stroke-width="20" stroke="#fff"/>
+                        </g>
+                    </svg>
+                </a>
+            </div>
+            <div class="col-10 d-flex justify-content-center">
+                <h1>tous les festivals</h1>
+            </div>
+            {% block iconRecherche %}
+                {# icone recherche #}
+                <div class="col-1 d-flex justify-content-center">
+                    <a class="recherche">
+                        <svg height="20px" height="250.31300354003906" id="Capa_1" style="enable-background:new 0 0 250.313 250.313;" version="1.1" viewbox="0 0 250.313 250.313" width="20px" width="250.31300354003906" x="0px" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
+                            <g id="Search">
+                                <path d="M244.186,214.604l-54.379-54.378c-0.289-0.289-0.628-0.491-0.93-0.76
+                                        c10.7-16.231,16.945-35.66,16.945-56.554C205.822,46.075,159.747,0,102.911,0S0,46.075,0,102.911
+                                        c0,56.835,46.074,102.911,102.91,102.911c20.895,0,40.323-6.245,56.554-16.945c0.269,0.301,0.47,0.64,0.759,0.929l54.38,54.38
+                                        c8.169,8.168,21.413,8.168,29.583,0C252.354,236.017,252.354,222.773,244.186,214.604z M102.911,170.146
+                                        c-37.134,0-67.236-30.102-67.236-67.235c0-37.134,30.103-67.236,67.236-67.236c37.132,0,67.235,30.103,67.235,67.236
+                                        C170.146,140.044,140.043,170.146,102.911,170.146z" stroke-width="20" stroke="#fff" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            {% endblock %}
         </div>
     </div>
-</div>
 
-<div class="sideSearch container-fluid" id="sideRecherche" onclick="closeRecherche()">
-    <div class="row">
-        <div class="col-12" 
+    <div class="sideSearch container-fluid" id="sideRecherche">
+        <a class="closebtn" href="javascript:void(0)">&times;</a>
+        <form action="/projet_data/tous_les_festivals" method="POST">
             <div class="row">
-                <div class="col-6">
-                    <a class="parDate" href="#">par date</a>
+                <div class="col-4">
+                    <input class="form-control" id="mois" name="mois" placeholder="rechercher par mois" type="text">
                 </div>
-                <div class="col-6">
-                    <a class="parRegion" href="#">par région</a>
+                <div class="col-4">
+                    <input class=" form-control" id="region" name="region" placeholder="rechercher par région" type="text">
+
                 </div>
-            </div>
-            <div class="row">                
-                <div class="offset-2 col-8">
-                    <form action="">
-                        <input type="text" id="search" name="search" class="inputSearch form-control"
-                            placeholder=" &nbsp;&nbsp;&nbsp;rechercher un festival">
-                            <a><i class="fas fa-search" aria-hidden="true"></i></a>
-                    </form>
+                <div class="col-4">
+                    <input class="form-control" id="nom" name="nom" placeholder="rechercher par festival" type="text">
                 </div>
             </div>
-        </div>
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center">
+                    <button id="btn" type="submit">rechercher</button>
+                </div>
+            </div>
+
+
+        </form>
     </div>
-</div>
 
-<script>    
-        document.getElementById("sideRecherche").style.display = "none";
-    function openRecherche() {   
-            
-        document.getElementById("sideRecherche").style.top = "0";
-        document.getElementById("sideRecherche").style.display = "block"; 
-        document.getElementById("mainTLF").style.maringTop = "150px";        
-    }
-
-    function closeRecherche() {
-        document.getElementById("sideRecherche").style.top = "-300px";
-        document.getElementById("mainTLF").style.marginTop = "0";        
-    }    
-</script>
 {% endblock %}
 
 {% block main %}
-<div id="mainTLF" class="container-fluid">
-    <div class="row">
-        <div id="map" class="col-12"></div>
+    <div class="container-fluid" id="mainTLF">
+        <div class="row">
+            <div class="col-12" id="map"></div>
+        </div>
     </div>
-</div>
-{# {% for i in donnees %}
-       <p> {{i.commune_principale}}</p>
-        {% endfor %} #}
+<div>
+<a class="recherche">
+    <svg height="20px" height="250.31300354003906" id="Capa_1" style="enable-background:new 0 0 250.313 250.313;" version="1.1" viewbox="0 0 250.313 250.313" width="20px" width="250.31300354003906" x="0px" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
+        <g id="Search">
+            <path d="M244.186,214.604l-54.379-54.378c-0.289-0.289-0.628-0.491-0.93-0.76
+                    c10.7-16.231,16.945-35.66,16.945-56.554C205.822,46.075,159.747,0,102.911,0S0,46.075,0,102.911
+                    c0,56.835,46.074,102.911,102.91,102.911c20.895,0,40.323-6.245,56.554-16.945c0.269,0.301,0.47,0.64,0.759,0.929l54.38,54.38
+                    c8.169,8.168,21.413,8.168,29.583,0C252.354,236.017,252.354,222.773,244.186,214.604z M102.911,170.146
+                    c-37.134,0-67.236-30.102-67.236-67.235c0-37.134,30.103-67.236,67.236-67.236c37.132,0,67.235,30.103,67.235,67.236
+                    C170.146,140.044,140.043,170.146,102.911,170.146z" stroke-width="20" stroke="#fff" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+        </g>
+    </svg>
+    </a>
+    </div>
 {% endblock %}
 
-{% block script %}{{ parent() }}
-<script>   
+{% block script %}
+    {{ parent() }}
+    <script>
 
-        var mymap = L.map('map').setView([45.756837, 3.239749], 6.4);
-    
-    //permet d'afficher la map :
-    L.tileLayer(
-        'https://api.mapbox.com/styles/v1/mgaaintjrae/cjw1s9oo30hlo1co1l7mgq804/tiles/256/{z}/{x}/{y}?&access_token=pk.eyJ1IjoibWdhYWludGpyYWUiLCJhIjoiY2p3MXMzMzJqMG4xcDQwa3Q1a25heGtnbyJ9.DMXg-P_uxnVml82Ki6SmUQ#10.0/42.362400/-71.020000/0}'
-        , {
+        var mymap = L.map('map').setView([
+            45.756837, 3.239749
+        ], 6.4);
+
+        // permet d'afficher la map :
+        L.tileLayer('https://api.mapbox.com/styles/v1/mgaaintjrae/cjw1s9oo30hlo1co1l7mgq804/tiles/256/{z}/{x}/{y}?&access_token=pk.eyJ1IjoibWdhYWludGpyYWUiLCJhIjoiY2p3MXMzMzJqMG4xcDQwa3Q1a25heGtnbyJ9.DMXg-P_uxnVml82Ki6SmUQ#10.0/42.362400/-71.020000/0}', {
             maxZoom: 18,
             id: 'mapbox.streets',
             accessToken: 'pk.eyJ1IjoibWdhYWludGpyYWUiLCJhIjoiY2p3MXMzMzJqMG4xcDQwa3Q1a25heGtnbyJ9.DMXg-P_uxnVml82Ki6SmUQ'
         }).addTo(mymap);
-    //permet d'afficher un repère :
-    var icon = L.icon({
-        iconUrl: 'http://localhost/projet_data/assets/images/icons/marker.svg',
-        color: 'orange',
-        iconSize: [25, 40], //taille du repère
-        iconAnchor: [12.5, 46], //ombre
-        popupAnchor: [-3, -76 ]
-    });
-    var markerOrange = {icon: icon};
-    //L.marker([46.861337, 5.036074], {icon: icon}).addTo(mymap);
 
-    
-  
-    {% for i in donnees %}
-    L.marker([{{ i.coordonnees_insee }}], markerOrange).bindPopup( "<b>{{ i.nom_manifestation }}</b> <br> <b>Date de début:</b> {{ i.date_debut }} <br> <b>Date de fin:</b> {{i.date_de_fin}} <br> <b>Complément domaine:</b> {{i.complement_domaine}} <br>"
-                       ).addTo(mymap);
-    
-    {% endfor %}    
+        // permet d'afficher un repère :
+        var icon = L.icon({
+            iconUrl: 'http://localhost/projet_data/assets/images/icons/marker.svg',
+            color: 'orange',
+            iconSize: [
+                25, 40
+            ], // taille du repère
+            iconAnchor: [
+                12.5, 46
+            ], // ombre
+            popupAnchor: [-3, -76]
+        });
+        var markerOrange = {
+            icon: icon
+        };
+        // L.marker([46.861337, 5.036074], {icon: icon}).addTo(mymap);
 
-     
-        
-</script>
+        var markers = L.markerClusterGroup({ // création de la variable marker contenant une fonction Leaflet qui permet de creer automatiquement un cluster contenant des markers
+
+            iconCreateFunction: function (cluster) { // function Leaflet permetant de personnaliser l'icone du cluster
+                return L.divIcon({
+                    html: cluster.getChildCount(),
+                    className: 'mycluster',
+                    iconSize: L.point(40, 40) // definir les caracteristique de l'icon, lui ajouter une class pour le personnaliser en CSS
+                });
+
+
+            },
+            showCoverageOnHover: false,
+            removeOutsideVisibleBounds: true,
+            spiderfyOnMaxZoom: true,
+            disableClusteringAtZoom: 13
+        }); // parametre de la function markerClusterGroupe, (d'autres parametres que celui utilisé ici sont disponible)
+
+
+        {% for i in donnees %}markers.addLayer(L.marker([{{ i.coordonnees_insee }}], markerOrange).bindPopup("<b>{{ i.nom_manifestation }}</b> <br> <b>Date de début:</b> {{ i.date_debut }} <br> <b>Date de fin:</b> {{ i.date_de_fin }}<br> <b>domaine:</b> {{ i.domaine }}br>"));{% endfor %}
+        /* Ci dessus, une boucle en Twig. 'in donnees' correspond au tableau transmit par le controller, 
+        on va y creer pour chaque item dans donnee, un layer contenant un marker, placé suivant les coordonné de l'item en question, 
+        'selectGreen' est la variable crée en Js, c'est l'icon du marker, à ce marker nous ajoutons une popUp, 
+        contenant les donnée de l'item en question sou forme d'HTML qui sera injecter dans la popUp */mymap.addLayer(markers);
+        // Nous ajoutons les layer crée en masse grace à la boucle, a notre map afin que celui ci soit visible
+    </script>
+
+    {% block scriptTLF %}
+        <script src="assets/js/scriptTLF.js"></script>
+    {% endblock %}
 {% endblock %}
