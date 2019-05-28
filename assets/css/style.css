@@ -1,22 +1,21 @@
+@charset "UTF-8";
 /* orange  rgb(239, 117,43)*/
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Bebas neue cyrillic';
+  font-family: "Bebas neue cyrillic";
 }
 
 @font-face {
-  font-family: 'Monoton';
+  font-family: "Monoton";
   src: url("../fonts/Monoton-Regular.ttf");
 }
-
 @font-face {
-  font-family: 'Bebas neue cyrillic';
+  font-family: "Bebas neue cyrillic";
   src: url("../fonts/Bebas Neue Cyrillic.ttf");
 }
-
 span {
-  font-family: 'Monoton';
+  font-family: "Monoton";
   color: white;
 }
 
@@ -26,17 +25,14 @@ span {
   background-size: 100%;
   background-repeat: no-repeat;
 }
-
 @media (max-width: 992px) {
   #background #barMenuAccueil {
     display: block;
   }
 }
-
 #background #barMenuAccueil #navbarNavAltMarkup .navbar-nav {
   width: 100%;
 }
-
 #background #barMenuAccueil #navbarNavAltMarkup .navbar-nav a {
   margin-left: 10%;
   color: white;
@@ -52,32 +48,23 @@ span {
     display: none;
   }
 }
-
 #navbarADM .navBar {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   height: 55px;
   background-color: black;
   overflow: hidden;
 }
-
 #navbarADM .navBar span {
   font-size: 30px;
 }
-
 #navbarADM .navBar .menuTop {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 @media (min-width: 992px) {
   #navbarADM .navBar .menuTop a {
     display: none;
   }
 }
-
 #navbarADM .navBar .topnav a {
   float: left;
   display: block;
@@ -87,12 +74,10 @@ span {
   text-decoration: none;
   font-size: 17px;
 }
-
 #navbarADM .navBar .topnav a:hover,
 #navbarADM .navBar .topnav a:focus {
   color: #f1f1f1;
 }
-
 #navbarADM .navBar .sidenav {
   cursor: pointer;
   height: 100%;
@@ -104,35 +89,28 @@ span {
   background-color: rgba(0, 0, 0, 0.9);
   overflow-x: hidden;
   padding-top: 60px;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-
 #navbarADM .navBar .sidenav #icon {
   position: relative;
   left: -26px;
 }
-
 #navbarADM .navBar .sidenav .menu {
   border-bottom: 1px solid rgba(239, 117, 43, 0.8);
   padding: 55px 65px;
 }
-
 #navbarADM .navBar .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
   color: #818181;
   display: block;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-
 #navbarADM .navBar .sidenav a:hover,
 #navbarADM .navBar .sidenav .offcanvas a:focus {
   color: #f1f1f1;
 }
-
 #navbarADM .navBar .sidenav .closebtn {
   cursor: pointer;
   position: absolute;
@@ -145,16 +123,12 @@ span {
 .navTousLesFestivals {
   height: 55px;
   background-color: black;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   position: relative;
 }
-
 .navTousLesFestivals a:hover {
   color: #EF752B;
 }
-
 .navTousLesFestivals h1 {
   display: contents;
   font-size: 30px;
@@ -166,7 +140,6 @@ span {
     display: none;
   }
 }
-
 #navbarTLF .sideSearch {
   cursor: pointer;
   width: 100%;
@@ -180,61 +153,65 @@ span {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-
 #navbarTLF .sideSearch .parDate {
   border-right: 1px solid rgba(173, 173, 173, 0.8);
   border-bottom: 1px solid rgba(173, 173, 173, 0.8);
 }
-
 #navbarTLF .sideSearch .parRegion {
   border-bottom: 1px solid rgba(173, 173, 173, 0.8);
 }
-
 #navbarTLF .sideSearch .inputSearch {
   position: relative;
 }
-
 #navbarTLF .sideSearch .inputSearch .fa-search:before {
-  content: "\f002";
+  content: "";
   position: absolute;
   top: 12px;
   left: 20px;
 }
 
+body .test {
+  height: 100vh;
+  color: #2c3e50;
+  background-color: #e67e22;
+}
+body .test #titre404 {
+  font-size: 90px;
+  text-align: center;
+  margin-top: 25%;
+}
+body .test #paragraphe404 {
+  text-align: center;
+  margin-bottom: 25%;
+}
+
 .footer {
   background-color: rgba(0, 0, 0, 0.9);
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   height: 60px;
   position: absolute;
   bottom: 0;
 }
-
 .footer .row .credits a {
   color: grey;
 }
-
 .footer .row .credits a:hover {
   color: white;
   text-decoration: none;
 }
-
 .footer .row .copyright {
   text-align: center;
   color: grey;
 }
-
 .footer .row .social {
   text-align: end;
 }
-
 .footer .row .social a .twitter {
   width: 7%;
 }
-
 .footer .row .social a .facebook {
   margin-left: 3%;
   width: 8%;
 }
+
 /*# sourceMappingURL=style.css.map */
