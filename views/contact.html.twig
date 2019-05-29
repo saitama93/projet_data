@@ -1,0 +1,49 @@
+{%extends 'layout.html.twig'%}
+
+{% block title %}
+Contact
+{% endblock%}
+
+{% block main %}
+	
+	<div id="mainWrapContact">
+		<div id="boxRightContact">
+			<form method="post">
+			<div id="blocForm">
+				<h1>POUR NOUS CONTACTER</h1><!--W3C ? -->
+					
+				<div id="boxNom" class="boxInput">
+					<label for="nom" id="label_nom"><i class="fas fa-user"></i></label>
+					<input type="text" name="nom1" id="nom" class="vide" placeholder="Nom *" />
+				</div>
+				<p id="label_p_nom"></p>
+				<div id="boxMail" class="boxInput">
+					<label for="mail" id="label_mail"><i class="fas fa-envelope"></i></label>
+					<input type="email" name="mail" id="mail" class="vide" placeholder="Mail *" /> 
+				</div>
+				<p id="pMail"></p>   
+				<div id="boxMessage">
+		        	<label for="contact" id="label_contact"><i class="fas fa-comment-alt"></i></label>
+		      		<textarea name="contact" id="contact" placeholder="Laissez nous un message *" class="vide"></textarea>
+		      	</div>
+		      	<p id="pArea"></p>
+		      	<p id="obligatoire">* Tous les chants sont obligatoires </p>
+		      	<div id="btnEnvoyer"><p>ENVOYER</p></div>
+		    </div><!-- #blocForm -->
+			</form>
+		</div><!-- #boxRightContact -->
+
+		<div id="boxLeftContact">
+			<div id="logoContact"><img id= "logo_accueil" src="assets/images/logo_accueil.png"></div>
+			<div id="textContact"><p>Agence de Besançon<br />10 rue Pablo Picasso<br />25000 Besançon</p></div>
+		</div>
+
+		<div id="popUpContact"><p id="txtPopUp">Texte pop up</p></div>
+	</div><!-- #mainWrapContact-->
+
+{% endblock%}
+
+
+{% block scriptContact %}
+	<script src="assets/js/contact.js"></script>
+{% endblock%}

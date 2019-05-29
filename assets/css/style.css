@@ -1,4 +1,7 @@
-/* orange #ef752b rgb(239, 117,43)*/
+/***************************/
+/* orange  rgb(239, 117,43) **********************/
+/* bleu h2 accueil #02023a : rgba(2, 2, 58, 0.7) */
+/*************************************************/
 * {
   margin: 0;
   padding: 0;
@@ -14,18 +17,261 @@ span {
   font-family: 'Monoton';
   color: white; }
 
-#background {
+/******************* ACCUEIL *************************/
+@media (max-width: 992px) {
+  #barMenuAccueil {
+    display: block; } }
+#barMenuAccueil #navbarNavAltMarkup .navbar-nav {
+  width: 100%; }
+  #barMenuAccueil #navbarNavAltMarkup .navbar-nav a {
+    margin-left: 10%;
+    color: white; }
+
+#map {
+  position: fixed;
+  height: 95vh; }
+
+@media (min-width: 992px) {
+  #navbarADM {
+    display: none; } }
+#navbarADM .navBar {
+  align-items: center;
+  height: 55px;
+  background-color: black;
+  overflow: hidden; }
+  #navbarADM .navBar span {
+    font-size: 30px; }
+  #navbarADM .navBar .menuTop {
+    justify-content: space-between; }
+  #navbarADM .navBar .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px; }
+  #navbarADM .navBar .topnav a:hover,
+  #navbarADM .navBar .topnav a:focus {
+    color: #f1f1f1; }
+  #navbarADM .navBar .sidenav {
+    cursor: pointer;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s; }
+    #navbarADM .navBar .sidenav #icon {
+      position: relative;
+      left: -26px; }
+    #navbarADM .navBar .sidenav .menu {
+      border-bottom: 1px solid rgba(239, 117, 43, 0.8);
+      padding: 55px 65px; }
+    #navbarADM .navBar .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s; }
+    #navbarADM .navBar .sidenav a:hover,
+    #navbarADM .navBar .sidenav .offcanvas a:focus {
+      color: #f1f1f1; }
+    #navbarADM .navBar .sidenav .closebtn {
+      cursor: pointer;
+      position: absolute;
+      top: -42px;
+      right: 0;
+      font-size: 83px;
+      margin-right: 50px; }
+
+.navTousLesFestivals {
+  height: 55px;
+  background-color: black;
+  align-items: center;
+  position: relative; }
+  .navTousLesFestivals a:hover {
+    color: #EF752B; }
+  .navTousLesFestivals h1 {
+    display: contents;
+    font-size: 30px;
+    color: #f1f1f1; }
+
+@media (min-width: 992px) {
+  #navbarTLF {
+    display: none; } }
+#navbarTLF .sideSearch {
+  cursor: pointer;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  top: 54px;
+  background-color: rgba(92, 91, 91, 0.9);
+  overflow-x: hidden;
+  margin-top: 54px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s; }
+  #navbarTLF .sideSearch .parDate {
+    border-right: 1px solid rgba(173, 173, 173, 0.8);
+    border-bottom: 1px solid rgba(173, 173, 173, 0.8); }
+  #navbarTLF .sideSearch .parRegion {
+    border-bottom: 1px solid rgba(173, 173, 173, 0.8); }
+  #navbarTLF .sideSearch .inputSearch {
+    position: relative; }
+    #navbarTLF .sideSearch .inputSearch .fa-search:before {
+      content: "\f002";
+      position: absolute;
+      top: 12px;
+      left: 20px; }
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.9);
+  align-items: center;
+  height: 60px;
+  bottom: 0; }
+  .footer .row .credits a {
+    color: grey; }
+  .footer .row .credits a:hover {
+    color: white;
+    text-decoration: none; }
+  .footer .row .copyright {
+    text-align: center;
+    color: grey; }
+  .footer .row .social {
+    text-align: end; }
+    .footer .row .social a .twitter {
+      width: 7%; }
+    .footer .row .social a .facebook {
+      margin-left: 3%;
+      width: 8%; }
+
+/***************** PAGE CONTACT *****************************/
+#mainWrapContact {
+  display: flex;
+  flex-direction: row;
+  background-color: #ef752b;
+  height: 95vh;
+  /*boxRightContact*/ }
+  #mainWrapContact #boxRightContact {
+    width: 50%;
+    /* #blocForm */ }
+    @media screen and (max-width: 992px) {
+      #mainWrapContact #boxRightContact {
+        width: 100%; } }
+    #mainWrapContact #boxRightContact #blocForm {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background-color: #ef752b; }
+      #mainWrapContact #boxRightContact #blocForm h1 {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        text-align: center;
+        color: white; }
+      #mainWrapContact #boxRightContact #blocForm input, #mainWrapContact #boxRightContact #blocForm textarea {
+        width: 90%;
+        border: none;
+        border-left: 2px solid grey;
+        margin-left: 3%; }
+      #mainWrapContact #boxRightContact #blocForm i {
+        font-size: 200%;
+        margin-top: 30%; }
+      #mainWrapContact #boxRightContact #blocForm .boxInput {
+        display: flex;
+        flex-direction: row;
+        background-color: white;
+        height: 60px;
+        width: 90%;
+        padding-left: 2%;
+        padding-top: 1%; }
+      #mainWrapContact #boxRightContact #blocForm ::placeholder {
+        font-size: 200%;
+        padding-left: 5%; }
+      #mainWrapContact #boxRightContact #blocForm #boxMessage {
+        display: flex;
+        flex-direction: row;
+        background-color: white;
+        height: 150px;
+        width: 90%;
+        padding-left: 2%;
+        padding-top: 1%; }
+      #mainWrapContact #boxRightContact #blocForm #btnEnvoyer {
+        background-color: black;
+        width: 50%;
+        padding-top: 3%; }
+        #mainWrapContact #boxRightContact #blocForm #btnEnvoyer p {
+          color: white;
+          font-size: 220%; }
+      #mainWrapContact #boxRightContact #blocForm #btnEnvoyer:hover {
+        cursor: pointer; }
+    #mainWrapContact #boxRightContact #obligatoire {
+      align-items: left; }
+  #mainWrapContact #boxLeftContact {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column; }
+    @media screen and (max-width: 992px) {
+      #mainWrapContact #boxLeftContact {
+        display: none; } }
+    #mainWrapContact #boxLeftContact #logoContact {
+      margin-top: 15%; }
+    #mainWrapContact #boxLeftContact p {
+      font-size: 250%;
+      text-align: center;
+      margin-top: 5%; }
+  #mainWrapContact #popUpContact {
+    height: 300px;
+    width: 500px;
+    background-color: red;
+    position: absolute;
+    margin-top: 5%;
+    margin-left: 35%;
+    display: none; }
+  #mainWrapContact #label_p_nom, #mainWrapContact #pMail, #mainWrapContact #pArea {
+    height: 30px; }
+
+/* #mainWrapContact*/
+/********* PAGE ACCUEIL ****************/
+#backgroundAccueil {
   background-image: url("../images/background_accueil.jpg");
-  height: 400px;
+  height: 95vh;
   background-size: 100%;
   background-repeat: no-repeat; }
-  #background #barMenu #navbarNavAltMarkup .navbar-nav {
-    width: 100%; }
-    #background #barMenu #navbarNavAltMarkup .navbar-nav a {
-      margin-left: 10%;
-      color: white; }
-
-#logo_text_accueil h2 {
-  color: white; }
+  @media screen and (max-width: 768px) {
+    #backgroundAccueil {
+      font-size: 200%; } }
+  #backgroundAccueil p {
+    color: white;
+    text-align: center;
+    font-size: 350%;
+    font-family: 'Monoton';
+    color: #ef752b; }
+    @media screen and (max-width: 768px) {
+      #backgroundAccueil p {
+        font-size: 200%; } }
+  #backgroundAccueil h2 {
+    color: white;
+    text-align: center;
+    margin-top: 3%;
+    font-size: 220%;
+    background-color: rgba(2, 2, 58, 0.7);
+    border-radius: 20px;
+    padding: 1%; }
+    @media screen and (max-width: 768px) {
+      #backgroundAccueil h2 {
+        font-size: 130%; } }
+  #backgroundAccueil #logoTextAccueil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5%; }
 
 /*# sourceMappingURL=style.css.map */
