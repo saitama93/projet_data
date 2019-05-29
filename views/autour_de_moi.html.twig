@@ -5,14 +5,13 @@
 {% block title %} Autour de moi {% endblock %}
 
 {% block header %}{{ parent() }} {% endblock %}
- {# {% block titlePage %}
-      <div class="col-7 d-flex justify-content-end">
-        <span>autour de moi</span>
-      </div>
-      {% endblock %} #}
 {% block iconRecherche %}
  <div id="navbarADM" class="container-fluid">
-    
+    {% block titlePage %}
+      <div class="col-7 d-flex justify-content-left">
+        <span>autour de moi</span>
+      </div>
+      {% endblock %}  
      {% block lienMenutop %}{% endblock %}
         <div id="sideNavigation" class="sidenav">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -35,7 +34,7 @@
               </g>
             </svg>accueil</a>
           {# logo agenda #}
-          <a class="menu" href="agenda"><svg version="1.1" id="icon" xmlns="http://www.w3.org/2000/svg"
+          {# <a class="menu" href="agenda"><svg version="1.1" id="icon" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px"
               viewBox="0 0 134.565 134.565" style="enable-background:new 0 0 134.565 134.565;" xml:space="preserve">
               <g>
@@ -72,7 +71,7 @@
              c0.42,0,0.42-0.421,0.84-0.421l16.8-16.821c1.68-1.682,1.68-4.205,0-5.887C83.243,87.888,80.723,87.888,79.043,89.57z"
                   stroke="#EF752B" stroke-width="5" />
               </g>
-            </svg>agenda</a>
+            </svg>agenda</a> #}
           {# logo autour de moi #}
           <a class="menu" href="autour_de_moi"><svg version="1.1" id="icon" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px"

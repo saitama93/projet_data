@@ -1,25 +1,46 @@
 {% extends 'layout.html.twig' %}
 
 {% block title %}
-Accueil 
+Accueil
 {% endblock %}
 
+ {# {% block titlePage %}
+      <div class="col-7 d-flex justify-content-left">
+        <span>contact</span>
+      </div>
+      {% endblock %}  #}
+      {# {% block header %} 
+<div id="backgroundAccueil">
 
-{% block header %}
-<div id="background">
-  {{ parent() }}
-{% endblock %}
-
+{% endblock %} #}
 {% block main %}
-<div id="logo_text_accueil">
+	<div id="backgroundAccueil">
+	<div id="logoTextAccueil">
     <img id= "logo_accueil" src="assets/images/logo_accueil.png">
-    <p>FESTI'FRANCE</p>
-    <h2> ne reste pas chez toi cet été! trouve ton festoch' facilement grâce à festi'france!</h2>
-
-{% endblock %}
-
-{% block footer %}
+    <p class="titre">FESTI' FRANCE</p>
+    <h2> ne reste pas chez toi cet été ! trouve ton festoch' facilement<br /> grâce à Festi' France !</h2>
 </div>
+
 {% endblock %}
 
-{% block script %}{{ parent() }}{% endblock %}
+ {% block footer %}
+ <div class="footer container-fluid d-flex">
+    <div class="row">
+      <div class="credits col-3">
+        <a class="credits" href="credits">Crédits</a>
+      </div>
+      <div class="col-6">
+        <p >Copyright &copy Igal, Priscilla, Sébastien</p>
+      </div>
+      <div class="social col-3">
+        <a href="https://twitter.com/" target="_blank"><img class="img-fluid twitter"
+            src="assets/images/logo_social/logo_tw.png" width="606px" height="606"
+            alt="logo rond bleu du réseau social twitter"></a>
+        <a href="https://www.facebook.com/" target="_blank"><img class="img-fluid facebook"
+            src="assets/images/logo_social/logo_fb.png" width="512px" height="512"
+            alt="logo rond bleu du réseau social facebook"></a>
+      </div>
+    </div>
+  </div>
+ {% endblock %}
+

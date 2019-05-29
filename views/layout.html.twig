@@ -66,7 +66,7 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-item nav-link" href="accueil">Accueil</a>
-        <a class="nav-item nav-link" href="agenda">Agenda</a>
+        {# <a class="nav-item nav-link" href="agenda">Agenda</a> #}
         <a class="nav-item nav-link" href="autour_de_moi">Autour de moi</a>
         <a class="nav-item nav-link" href="tous_les_festivals">Tous les festivals</a>        
         <a class="nav-item nav-link" href="contact">Contact</a>
@@ -76,17 +76,13 @@
   
   <div id="navbarADM" class="container-fluid">
     <div class="navBar row">
-    {# {% block titlePage %} #}
+    {% block titlePage %}
       <div class="col-7 d-flex justify-content-left">
         <span>festi'france</span>
       </div>
-       {# {% block iconRecherche %}
-       
-        {% endblock %} #}
-      {# {% endblock %} #}
+      {% endblock %}       
       <div class="menuTop col-7  ">
 {% block lienMenutop %}
-
             <a class="nav-item nav-link" href="accueil">accueil</a>
         <a class="nav-item nav-link" href="agenda">agenda</a>
         <a class="nav-item nav-link" href="autour_de_moi">autour de moi</a>
@@ -114,7 +110,7 @@
               </g>
             </svg>accueil</a>
           {# logo agenda #}
-          <a class="menu" href="agenda"><svg version="1.1" id="icon" xmlns="http://www.w3.org/2000/svg"
+          {# <a class="menu" href="agenda"><svg version="1.1" id="icon" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px"
               viewBox="0 0 134.565 134.565" style="enable-background:new 0 0 134.565 134.565;" xml:space="preserve">
               <g>
@@ -151,7 +147,7 @@
              c0.42,0,0.42-0.421,0.84-0.421l16.8-16.821c1.68-1.682,1.68-4.205,0-5.887C83.243,87.888,80.723,87.888,79.043,89.57z"
                   stroke="#EF752B" stroke-width="5" />
               </g>
-            </svg>agenda</a>
+            </svg>agenda</a> #}
           {# logo autour de moi #}
           <a class="menu" href="autour_de_moi"><svg version="1.1" id="icon" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px"
@@ -321,8 +317,8 @@
       <div class="credits col-3">
         <a class="credits" href="credits">Crédits</a>
       </div>
-      <div class="copyright col-6">
-        <p>Copyright &copy Igal, Priscilla, Sébastien</p>
+      <div class="col-6">
+        <p class="copyright">Copyright &copy Igal, Priscilla, Sébastien</p>
       </div>
       <div class="social col-3">
         <a href="https://twitter.com/" target="_blank"><img class="img-fluid twitter"
