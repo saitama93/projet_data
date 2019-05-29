@@ -1,12 +1,15 @@
 {% extends "layout.html.twig" %}
+{%block main %}
 
-{% block main %}
-<div>
+<form method="post" action="">
 
-    <p id="test"> cgfherhfgrefkrvfvreufvberfkhswvl</p>
-    <button id="btn">click me<button>
-</div>
-
+   <select name="depart">
+   
+        {% for i in donnees %}
+            <p><option value='$key'>{{i.nom_manifestation}}</option></p>;
+            <p>L'atitude</p>
+        {% endfor %}
+   </select>
+   <input type="submit" name="valider" value="valider" />
+</form>
 {% endblock %}
-
-{% block scriptTest %}<script src="assets/js/test.js"></script>{% endblock %}

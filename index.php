@@ -50,11 +50,9 @@ if (($parts[1] == 'projet_data')) {
                 selectionAllFestival($pdo, $twig);
             break;
 
-            // case 'juin':
-            //     require_once("models/connexion_bdd.php");
-            //     require_once("controllers/festival_Controller.php");
-            //     affichJuin($pdo, $twig);
-            //     break;
+            case 'credits':
+                echo ('credits.html.twig');
+            break;
 
             case 'contact':
                 echo $twig->render('contact.html.twig');
@@ -68,7 +66,9 @@ if (($parts[1] == 'projet_data')) {
             break;
 
             case 'test':
-               echo $twig->render('test.html.twig');
+               require_once('models/connexion_bdd.php');
+               require_once("controllers/festival_Controller.php");
+               test($pdo, $twig);
 
             break;
 

@@ -63,5 +63,43 @@ function selectionSearchFestival($pdo, $twig)
    echo $twig->render('form.html.twig', [
         "donnees" => $res
     ]);
+}
 
+// FONCTION POUR LES 100KM
+
+function test($pdo, $twig){
+
+    if(isset($_POST['depart'])){
+        $villeDepart=$_POST['depart'];
+        $latStart=$ville[$villeDepart]['latitude'];
+        $longStart=$ville[$villeDepart]['longitude'];
+        // $coordonnees = $ville[$villeDepart]['']
+        $latCardStart=$ville[$villeDepart]['latCard'];
+        $longCardStart=$ville[$villeDepart]['longCard'];
+    }   
+
+    foreach($ville as $key =>$value){
+
+        if($value["longCard"]!=$longCardStart){
+            $longA= -$longStart;
+        }else{
+            $longA=$longStart;
+        }
+        $distance=6371*
+              acos( cos($value["latitude"])*
+                    cos($latStart)*
+                    cos($longA-$value["longitude"])+
+                    sin($value["latitude"])*
+                    sin($latStart)
+                   );
+    echo "<br>distance de ".$villeDepart." à ".$key." : ".$distance." km<br/>"; 
+    }
+
+    $affich_donnee = $pdo->query('SELECT * FROM liste_festivals');
+
+    $res = $affich_donnee->fetchAll();
+
+    echo $twig->render('test.html.twig', [
+        "donnees" => $res
+    ]);
 }
