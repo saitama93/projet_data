@@ -1,7 +1,7 @@
 {% extends 'layout.html.twig' %}
 
 {% block API_leaflet %}{{ parent() }}{% endblock %}
-
+{% block API_mapbox %}{{ parent() }}{% endblock %}
 {% block title %} Autour de moi {% endblock %}
 
 {% block header %}{{ parent() }} {% endblock %}
@@ -230,14 +230,18 @@
         <div id="map" class="col-12"></div>
     </div>
 </div>
+<div>
+    <button id="geo-me" class="geo-me">Ma position</button>
+</div>
 {% endblock %}
 
 {% block footer %}{{ parent() }}{% endblock %}
 
 {% block script %}{{ parent() }}
 <script>
-        var mymap = L.map('map').setView([45.756837, 3.239749], 6.71);
-        //permet d'afficher la map :
+
+        var mymap = L.map('map').setView([45.756837, 3.239749], 5.5);
+        //AFFICHAGE DE LA MAP :
         L.tileLayer(
             'https://api.mapbox.com/styles/v1/mgaaintjrae/cjw1s9oo30hlo1co1l7mgq804/tiles/256/{z}/{x}/{y}?&access_token=pk.eyJ1IjoibWdhYWludGpyYWUiLCJhIjoiY2p3MXMzMzJqMG4xcDQwa3Q1a25heGtnbyJ9.DMXg-P_uxnVml82Ki6SmUQ#10.0/42.362400/-71.020000/0}'
         
@@ -248,27 +252,80 @@
             }).addTo(mymap);
         
         //permet d'afficher la position de l'utilisateur :
-        var circle = L.circle([51.508, -0.11], {
-            color: 'red',
-            fillColor: '#f03',
-            fillOpacity: 0.5,
-            radius: 500
-        });
+        // var circle = L.circle([51.508, -0.11], {
+        //     color: 'red',
+        //     fillColor: '#f03',
+        //     fillOpacity: 0.5,
+        //     radius: 500
+        // });
 
         var icon = L.icon({
         iconUrl: 'http://localhost/projet_data/assets/images/icons/marker.svg',
         color: 'orange',
-        iconSize: [25, 40], //taille du repère
+        iconSize: [40, 40], //taille du repère
         iconAnchor: [12.5, 46], //ombre
         popupAnchor: [-3, -76 ]
+
     });
 
    
 
     var markerOrange = {icon: icon};
         
-        L.marker([46.861337, 5.036074], {icon: icon}).addTo(mymap);
+        //L.marker([46.861337, 5.036074], {icon: icon}).addTo(mymap);
+
+var geoloc = L.icon({
+        iconUrl: 'http://localhost/projet_data/assets/images/icons/position.svg',
+          
+        iconSize: [40, 40], //taille du repère
+        iconAnchor: [12.5, 46], //ombre
+        popupAnchor: [-3, -76 ]
+        
+       
+    });
+
+    var pulse = L.icon({
+ className: 'pulse'
+
+    });
+
+
+ var geoMe = document.querySelector('#geo-me'); // création d'une variable pour cibler le button géocalisation
+
+geoMe.addEventListener('click', function(e) { // nous créons une fonction, qui sera executer au click du boutton
+mymap.locate({setView: true, maxZoom: 18}); // nous allons localiser l'utilisateur avec la function locate de leaflet, au quel nous ajoutons quelque parametres
+});
+
+function onLocationFound(e) { // si la location accepté, function onLocationFound est executer
+L.marker(e.latlng, {icon: geoloc}).addTo(mymap); // placement du marker geolocalisation sur la map
+L.marker(e.latlng, {icon: pulse}).addTo(mymap); // placement du cercle pulse autour du marker
+}
+
+
+mymap.on('locationfound', onLocationFound);
+
+//AFFICHER LE TRACER DE CHAQUES ROUTES DEPUIS SA POSITION, VERS LES FESTIVALS DU DEPARTEMENT
+// var latlngs = [
+//     [44.9245233686, 2.44162453828],
+//     [45.0535734386, 4.81493474284],
+//     [44.276084918, 5.27102720538]
+// ];
+// var polyline = L.polyline(latlngs, postcode, {color: 'green'}).addTo(mymap);
+// // zoom the map to the polyline
+// map.fitBounds(polyline.getBounds());
+
+
+ {% for i in donnees %}
+ L.marker([{{ i.coordonnees_insee }}], markerOrange).bindPopup("<b>{{ i.nom_manifestation }}</b> <br> {{ i.commune_principale }} <br>");
+ {% endfor %}
+        /* Ci dessus, une boucle en Twig. 'in donnees' correspond au tableau transmit par le controller, 
+        on va y creer pour chaque i dans donnee, un layer contenant un marker, placé suivant les coordonné de l'item en question, 
+        'markerOrange' est la variable crée en Js, c'est l'icon du marker, à ce marker nous ajoutons une popUp, 
+        contenant les donnée de l'item en question sou forme d'HTML qui sera injecter dans la popUp */
+        
 </script>
 
+
 {% endblock %}
+{% block scriptADM %}<script src="assets/js/scriptADM.js"></script>{% endblock %}
 

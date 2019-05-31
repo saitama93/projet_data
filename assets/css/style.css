@@ -73,12 +73,16 @@ span {
   background-color: rgba(2, 2, 58, 0.7);
   border-radius: 20px;
   padding: 1%;
+  line-height: 156%;
+  letter-spacing: 0.41rem;
 }
 
 @media screen and (max-width: 768px) {
   #backgroundAccueil h2 {
     padding: 50px 0;
     font-size: 180%;
+    line-height: 156%;
+    letter-spacing: 0.2rem;
   }
 }
 
@@ -96,29 +100,6 @@ span {
   padding-top: 5%;
 }
 
-/*#background {
-    background-image: url("../images/background_accueil.jpg");
-    height: 400px;
-    background-size: 100%;
-    background-repeat: no-repeat;
-
-
-
-    #barMenuAccueil {
-
-        #navbarNavAltMarkup {
-            .navbar-nav {
-                width: 100%;
-
-                a {
-                    margin-left: 10%;
-                    color: white;
-                }
-            }
-        }
-    }
-
-}*/
 .nav-link {
   display: block;
 }
@@ -138,7 +119,8 @@ span {
 
 .navbar-light .navbar-nav .nav-link {
   color: white;
-  font-size: 23px;
+  padding-left: 83px;
+  font-size: 27px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -269,6 +251,29 @@ span {
   }
 }
 
+.geo-me {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 10%);
+          transform: translate(-50%, 10%);
+  border-radius: 7px;
+  font-family: Arial;
+  color: rgba(239, 117, 43, 0.8);
+  font-size: 30px;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 10px 20px 10px 20px;
+  border: solid rgba(239, 117, 43, 0.8) 2px;
+  text-decoration: none;
+}
+
+.geo-me:hover {
+  background: rgba(239, 117, 43, 0.8);
+  text-decoration: none;
+  color: #ffffff;
+  border: none;
+}
+
 .navTousLesFestivals {
   height: 55px;
   background-color: black;
@@ -291,8 +296,7 @@ span {
 #mainTLF .loupe .fa-search:before {
   content: "\f002";
   font-size: 30px;
-  position: relative;
-  top: 10px;
+  display: block;
 }
 
 .mycluster {
@@ -324,38 +328,55 @@ span {
 .sideSearch .closebtn {
   cursor: pointer;
   color: rgba(239, 117, 43, 0.8);
+  position: absolute;
+  font-size: 50px;
+  bottom: 0px;
 }
 
-.sideSearch .text {
+.sideSearch .closebtn:hover {
+  text-decoration: none;
+}
+
+.text {
   color: rgba(239, 117, 43, 0.8);
-  font-size: 30px;
+  font-size: 45px;
+  margin-top: 6px;
 }
 
-.sideSearch .input {
+.input {
   margin-bottom: 10px;
 }
 
-.sideSearch .input input {
+.input input {
   background-color: transparent;
+  height: 60px;
 }
 
-.sideSearch .input input ::-webkit-input-placeholder {
+.input ::-webkit-input-placeholder {
   color: rgba(239, 117, 43, 0.8);
+  letter-spacing: 3px;
+  font-size: 15px;
 }
 
-.sideSearch .input input :-ms-input-placeholder {
+.input :-ms-input-placeholder {
   color: rgba(239, 117, 43, 0.8);
+  letter-spacing: 3px;
+  font-size: 15px;
 }
 
-.sideSearch .input input ::-ms-input-placeholder {
+.input ::-ms-input-placeholder {
   color: rgba(239, 117, 43, 0.8);
+  letter-spacing: 3px;
+  font-size: 15px;
 }
 
-.sideSearch .input input ::placeholder {
+.input ::placeholder {
   color: rgba(239, 117, 43, 0.8);
+  letter-spacing: 3px;
+  font-size: 15px;
 }
 
-.sideSearch #btn {
+#btn {
   margin: 15px;
   padding: 7px 30px;
   background-color: black;
@@ -364,12 +385,21 @@ span {
   font-size: 30px;
 }
 
-.sideSearch #btn:hover {
+#btn:hover {
   color: #ef752b;
 }
 
 .loupePC {
   cursor: pointer;
+}
+
+.loupePC .loupe {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  margin-top: 15px;
+  -webkit-box-shadow: 3px 3px 5px 1px rgba(125, 125, 125, 0.8);
+          box-shadow: 3px 3px 5px 1px rgba(125, 125, 125, 0.8);
 }
 
 @media screen and (max-width: 992px) {
@@ -611,5 +641,11 @@ span {
 .footer .row .social a .facebook {
   margin-left: 3%;
   width: 15%;
+}
+
+.pulse {
+  cursor: pointer;
+  -webkit-animation: pulse 2s infinite;
+          animation: pulse 2s infinite;
 }
 /*# sourceMappingURL=style.css.map */

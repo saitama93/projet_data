@@ -17,7 +17,15 @@ function affichAllInfoFestivals($pdo, $twig)
 {
     $affich_donnee = $pdo->query('SELECT * FROM liste_festivals');
     $res = $affich_donnee->fetchAll();
-    echo $twig->render('pop-up.html.twig', [
+    echo $twig->render('tous_les_festivals.html.twig', [
+        "donnees" => $res
+    ]);
+}
+function affichAllInfoFestivalsADM($pdo, $twig)
+{
+    $affich_donnee = $pdo->query('SELECT * FROM liste_festivals');
+    $res = $affich_donnee->fetchAll();
+    echo $twig->render('autour_de_moi.html.twig', [
         "donnees" => $res
     ]);
 }
@@ -38,6 +46,7 @@ function affichJuin($pdo, $twig)
     ]);
 }
 
+// FONCTION QUI AFFICHE LE LIEU DU FESTIVAL RECHERCHé (par mois, par région ou par nom)
 function selectionSearchFestival($pdo, $twig)
 {
 
@@ -73,18 +82,3 @@ echo $twig->render('tous_les_festivals.html.twig', [
 ]);
 
 }
-
-
-
-
-
-
-
-// FONCTION QUI AFFICHE LE FESTIVAL RECHERCHé (par son nom)
-
-// Si le champs nom du festival existe tu m'affiches:
-// echo la fonction de la requête SQL
-
-
-// FONCTION QUI AFFICHE LE LIEU DU FESTIVAL RECHERCHé (par sa ville, son département ou sa région)
-// FONCTION QUI  AFFICHE LE MOIS DU FESTIVAL RECHERCHé (par son mois)

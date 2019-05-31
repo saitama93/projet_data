@@ -38,8 +38,10 @@ if (($parts[1] == 'projet_data')) {
                 break;
 
             case 'autour_de_moi':
-                echo $twig->render('autour_de_moi.html.twig');
-
+                // echo $twig->render('autour_de_moi.html.twig');
+                require_once("models/connexion_bdd.php");
+                require_once("controllers/festival_Controller.php");
+                affichAllInfoFestivalsADM($pdo, $twig);
                 break;
 
             case 'tous_les_festivals':
@@ -54,6 +56,10 @@ if (($parts[1] == 'projet_data')) {
 
             case 'contact_ajax':
                 require_once("controllers/mail_controller.php");
+                break;
+
+            case 'coordonate_ajax':
+                require_once("controllers/coordonate_controller.php");
                 break;
 
             default:

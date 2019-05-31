@@ -27,7 +27,7 @@
     <div class="container-fluid" id="navbarTLF">
         <div class="navTousLesFestivals row ">
             <div
-                class="col-2 d-flex justify-content-start">
+                class="col-2 d-flex justify-content-center">
                 {# icone accueil #}
                 <a class="accueil" href="accueil">
                     <svg height="20px" id="icon" style="enable-background:new 0 0 611.997 611.998;" version="1.1" viewbox="0 0 611.997 611.998" width="20px" x="0px" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
@@ -69,7 +69,7 @@
     </div>
 
     <div class="sideSearch container-fluid" id="sideRecherche">
-        <a class="closebtn" href="javascript:void(0)">&times;</a>
+        {# <a class="closebtn" href="javascript:void(0)">&times;</a> #}
         <div class="text row ">
             <div class="col-12 d-flex justify-content-center">
                 <p>
@@ -95,9 +95,8 @@
                     <button id="btn" type="submit">rechercher</button>
                 </div>
             </div>
-
-
         </form>
+        <a class="closebtn" href="javascript:void(0)">&times;</a>
     </div>
 
 {% endblock %}
@@ -112,17 +111,7 @@
             <div class="loupePC row">
                 <div class="col-12 d-flex justify-content-end">
                     <a class="loupe">
-                        <i class="fas fa-search"></i>
-                        {# <svg height="20px" height="250.31300354003906" id="Capa_1" style="enable-background:new 0 0 250.313 250.313;" version="1.1" viewbox="0 0 250.313 250.313" width="20px" width="250.31300354003906" x="0px" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
-                                                <g id="Search">
-                                                    <path d="M244.186,214.604l-54.379-54.378c-0.289-0.289-0.628-0.491-0.93-0.76
-                                                            c10.7-16.231,16.945-35.66,16.945-56.554C205.822,46.075,159.747,0,102.911,0S0,46.075,0,102.911
-                                                            c0,56.835,46.074,102.911,102.91,102.911c20.895,0,40.323-6.245,56.554-16.945c0.269,0.301,0.47,0.64,0.759,0.929l54.38,54.38
-                                                            c8.169,8.168,21.413,8.168,29.583,0C252.354,236.017,252.354,222.773,244.186,214.604z M102.911,170.146
-                                                            c-37.134,0-67.236-30.102-67.236-67.235c0-37.134,30.103-67.236,67.236-67.236c37.132,0,67.235,30.103,67.235,67.236
-                                                            C170.146,140.044,140.043,170.146,102.911,170.146z" stroke-width="20" stroke="#fff" style="fill-rule:evenodd;clip-rule:evenodd;"/>
-                                                </g>
-                                            </svg> #}
+                        <i class="fas fa-search"></i>                        
                     </a>
                 </div>
             </div>
@@ -179,7 +168,7 @@
         }); // parametre de la function markerClusterGroupe, (d'autres parametres que celui utilisé ici sont disponible)
 
 
-        {% for i in donnees %}markers.addLayer(L.marker([{{ i.coordonnees_insee }}], markerOrange).bindPopup("<b>{{ i.nom_manifestation }}</b> <br> <b>Date de début:</b> {{ i.date_debut }} <br> <b>Date de fin:</b> {{ i.date_de_fin }}<br> <b>domaine:</b> {{ i.domaine }}<br>"));{% endfor %}
+        {% for i in donnees %}markers.addLayer(L.marker([{{ i.coordonnees_insee }}], markerOrange).bindPopup("<b>{{ i.nom_manifestation }}</b> <br> <b>Date de début:</b> {{ i.date_debut }} <br> <b>Date de fin:</b> {{ i.date_de_fin }}<br> <b>domaine:</b> {{ i.domaine }}<br><a href='{{ i.site_web }}'>Voir le site </a>"));{% endfor %}
         /* Ci dessus, une boucle en Twig. 'in donnees' correspond au tableau transmit par le controller, 
         on va y creer pour chaque item dans donnee, un layer contenant un marker, placé suivant les coordonné de l'item en question, 
         'selectGreen' est la variable crée en Js, c'est l'icon du marker, à ce marker nous ajoutons une popUp, 

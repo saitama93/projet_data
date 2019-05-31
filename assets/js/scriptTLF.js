@@ -17,16 +17,16 @@ function openRecherche() {
 
     document.getElementById("sideRecherche").style.top = "0";
     document.getElementById("sideRecherche").style.display = "block";
-    document.getElementById("mainTLF").style.maringTop = "150px";
+    //document.getElementById("mainTLF").style.marginTop = "150px";
 }
 
 function closeRecherche() {
-    document.getElementById("sideRecherche").style.top = "-300px";
+    document.getElementById("sideRecherche").style.top = "-600px";
     document.getElementById("mainTLF").style.marginTop = "0";
 }
 
 function loupeOpen(){
     document.getElementById("sideRecherche").style.top = "0";
     document.getElementById("sideRecherche").style.display = "block";
-    document.getElementById("mainTLF").style.maringTop = "150px";
+    //document.getElementById("mainTLF").style.marginTop = "150px";
 }
