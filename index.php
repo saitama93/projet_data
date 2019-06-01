@@ -54,6 +54,10 @@ if (($parts[1] == 'projet_data')) {
                 echo $twig->render('contact.html.twig');
                 break;
 
+            case 'credits':
+                echo $twig->render('credits.html.twig');
+                break;
+
             case 'contact_ajax':
                 require_once("controllers/mail_controller.php");
                 break;
