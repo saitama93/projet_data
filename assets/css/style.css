@@ -28,11 +28,12 @@ span {
   background-size: 100%;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: right;
 }
 
 @media screen and (min-width: 768px) {
   #backgroundAccueil {
-    height: 89vh;
+    height: 91vh;
   }
 }
 
@@ -49,6 +50,18 @@ span {
 #backgroundAccueil #barMenuAccueil #navbarNavAltMarkup .navbar-nav a {
   margin-left: 10%;
   color: white;
+}
+
+@media screen and (max-width: 376px) {
+  #backgroundAccueil #logo_accueil {
+    padding-top: 180px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #backgroundAccueil #logo_accueil {
+    padding-top: 150px;
+  }
 }
 
 #backgroundAccueil .titre {
@@ -82,6 +95,12 @@ span {
     font-size: 180%;
     line-height: 156%;
     letter-spacing: 0.2rem;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  #backgroundAccueil h2 {
+    display: none;
   }
 }
 
@@ -604,7 +623,7 @@ span {
 
 /* #mainWrapContact*/
 .footer {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: black;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
